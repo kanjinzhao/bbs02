@@ -8,9 +8,9 @@ class Article(models.Model):
     '''
     title = models.CharField(u"文章标题",max_length=255,unique=True)
     categroy = models.ForeignKey("Category",verbose_name=u"板块")
-    head_img = models.ImageField(upload_to="uploads")
+    head_img = models.ImageField(u"缩略图",upload_to="uploads")
     content = models.TextField(u"文章内容",)
-    author = models.ForeignKey("UserProfile")
+    author = models.ForeignKey("UserProfile",verbose_name=u"作者")
     publish_date = models.DateTimeField(auto_now=True)
     hideden = models.BooleanField(u"是否隐藏",default=False)
     weight = models.IntegerField(u"优先级",default=1000)
@@ -68,8 +68,8 @@ class Category(models.Model):
     '''
     板块表
     '''
-    name = models.CharField(max_length=64,unique=True)
-    admin = models.ForeignKey('UserProfile')
+    name = models.CharField(u"板块名称",max_length=64,unique=True)
+    admin = models.ForeignKey('UserProfile',verbose_name=u"管理员")
 
 
     def __unicode__(self):
