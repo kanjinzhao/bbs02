@@ -20,5 +20,5 @@ from web import views
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',views.index),
-    url(r'^category/(\d+)/$',views.category,name="category"),
+    url(r'^category/(\d+)/$',views.lanmu,name='category1'),
 ]
