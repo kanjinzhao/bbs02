@@ -8,7 +8,7 @@ class Article(models.Model):
     '''
     title = models.CharField(u"文章标题",max_length=255,unique=True)
     categroy = models.ForeignKey("Category",verbose_name=u"板块")
-    head_img = models.ImageField(u"缩略图",upload_to="uploads")
+    head_img = models.ImageField(u"缩略图",upload_to="static/uploads")
     content = models.TextField(u"文章内容",)
     author = models.ForeignKey("UserProfile",verbose_name=u"作者")
     publish_date = models.DateTimeField(u'发布时间',auto_now=True)

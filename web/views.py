@@ -9,7 +9,9 @@ def index(req):
     return render(req,'index2.html',{'articles':articles})
 
 
-def lanmu(req):
-    articles = models.Article.objects.all()
+def lanmu(req,id):
+
+    articles = models.Article.objects.filter(categroy_id=id)
+
     return render(req,'index2.html',{'articles':articles})
 
