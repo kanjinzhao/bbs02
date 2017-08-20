@@ -1,0 +1,80 @@
+{% extends 'index.html' %}
+
+
+{% block page-banner %}
+{% endblock %}
+
+{% block page-container %}
+
+<div class="content bg-grday">
+    <div class="container container--sm">
+        <h2 class="title">Company details</h2>
+        <form method="POST" action="" accept-charset="UTF-8" enctype="multipart/form-data">
+            <input name="_method" value="PUT" type="hidden">
+            <input name="_token" value="fSnAdtNq8k1QDYfNLNTnRxvyAm4TYOGi5HmPgU7k" type="hidden">
+            <fieldset>
+                <input name="_redirect" value="https://vuejobs.com/jobs/create" type="hidden">
+                <p>Fill the form below and let us know about your company. This information
+                is required before posting a new job.</p>
+                <div id="field_name" class="form-group">
+                    <label for="name" class="form-control-label">Company name</label>
+                <div class="controls">
+                    <input required="required" placeholder="Your company name" id="name" name="name" class="form-control" type="text">
+                </div>
+                </div>
+
+                <div id="field_name" class="form-group">
+                    <label for="name" class="form-control-label">栏目</label>
+                <div class="controls">
+                    <select>
+                        {% for lanmu in category %}
+                        <option value="{{lanmu.id}}">{{lanmu.name}}</option>
+                        {% endfor %}
+
+                    </select>
+
+                </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="form-control-label">Company logo</label>
+                    <div class="form-text small">Any kind of image: SVG, PNG, JPG...</div>
+                    <span role="img" class="account-company__avatar " style="background-image: url(&quot;&quot;);"></span>
+                    <div><label class="btn btn-secondary btn-file">
+                        <i class="fa fa-image"></i>Select logo
+                <input name="avatar" id="company-avatar" type="file">
+                    </label>
+                    </div>
+                </div>
+                <div id="field_website" class="form-group">
+                    <label for="website" class="form-control-label">
+        Website
+                    <span>optional</span></label>
+                    <div class="controls">
+                        <input placeholder="The company website" id="website" name="website" class="form-control" type="text">
+                    </div>
+                </div>
+                <div id="field_description" class="form-group">
+                    <label for="description" class="form-control-label">
+        Description
+                    <span>optional</span></label>
+                    <div class="controls">
+                        <textarea id="description" name="description" cols="50" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="text-center">
+                <button class="btn btn-success"><i class="fa fa-arrow-right"></i>Next step</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+
+{% block page-right %}
+{% endblock %}

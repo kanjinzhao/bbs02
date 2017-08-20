@@ -1,0 +1,73 @@
+{% extends 'index.html' %}
+
+{% block page-container %}
+ <div class="main pt-3">
+                <div class="job__desc mt-4">
+                    <h2 class="title">{{article.title}}</h2>
+                    <div>
+                        {{article.content}}
+                    </div>
+
+                </div>
+ </div>
+
+
+{% endblock %}
+
+{% block page-right %}
+
+
+                <div class="sidebar__row job__interest bg-gray">
+                    <a  href="mailto:join@regily.com"
+                        class="btn btn-block btn-danger">Apply now!</a>
+                    <hr>
+                    <h5>Are you interested in this position?</h5>
+                    <div>Make sure you have read the <a href="#how-to-apply" class="font-italic">How to Apply</a>
+                        section.
+                    </div>
+                </div>
+
+                <div class="sidebar__row job__share">
+                    <div class="share share--list">
+                        <h3>Spread the word!</h3>
+
+                        <div class="social-links d-flex flex-column">
+                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer"
+                               class="social-link social-facebook">
+                                <i class="fa fa-fw fa-facebook"></i> Share on Facebook
+                            </a>
+                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;text=Passionate%20frontend%20developer"
+                               class="social-link social-twitter">
+                                <i class="fa fa-fw fa-twitter"></i> Tweet this job
+                            </a>
+                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer&amp;mini=true"
+                               class="social-link social-linkedin">
+                                <i class="fa fa-fw fa-linkedin"></i> Post on LinkedIn
+                            </a>
+                            <a href="whatsapp://send?text=Passionate%20frontend%20developer%20https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
+                               class="social-link social-whatsapp">
+                                <i class="fa fa-fw fa-whatsapp"></i> Message on WhatsApp
+                            </a>
+                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://plus.google.com/share?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
+                               class="social-link social-google">
+                                <i class="fa fa-fw fa-google-plus"></i> Share on Google
+                            </a>
+                        </div>
+
+                    </div>                </div>
+
+
+
+
+
+
+                <div class="sidebar__row job__newsletter">
+                    <h3>Vue.js resources</h3>
+                    <ul class="list-unstyled">
+                        <li><a target="_blank" href="https://vuejsfeed.com/">Vue.js Feed</a></li>
+                        <li><a target="_blank" href="https://vue.threadless.com/">The Vue Shop</a></li>
+                    </ul>
+                </div>
+
+
+{% endblock %}

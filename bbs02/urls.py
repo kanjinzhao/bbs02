@@ -21,4 +21,9 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$',views.index,name='index'),
     url(r'^category/(\d+)/$',views.lanmu,name='lanmu'),
+    url(r'^article/(\d+)/$', views.article, name='article'),
+    url(r'^user/logout/',views.log_out,name='logout'),
+    url(r'^user/login/',views.log_in,name='login'),
+    url(r'^user/addart/',views.add_art,name='addart'),
+
 ]
