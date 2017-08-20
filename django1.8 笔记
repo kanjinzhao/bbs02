@@ -1,0 +1,176 @@
+一、设计表结构
+文章表、用户表、评论表、栏目表（板块）、用户组表、
+
+文章表：
+	标题
+	内容
+	所属栏目
+	发帖时间
+	标题图片
+	是否隐藏
+	发布者
+	帖子级别
+
+用户表：
+	用户名
+	组
+评论表：
+	评论内容
+	文章id
+	用户id
+	评论日期
+	父评论id
+栏目表：
+	栏目内容
+	管理员
+
+用户组：
+	组名称
+
+点赞：
+	文章id
+	用户名
+	日期
+	
+
+django 1.8 笔记：
+
+
+models.ForeignKeyField 外键
+models.ManytoManyField 多对多
+
+
+
+django1.8
+
+迁移数据库
+python manage.py migrate
+python manage.py makemigrations
+python manage.py migrage
+
+创建管理员
+python mange.py createsuperuser
+
+
+
+
+
+
+#自定义后台文章列表显示项
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('id','title','categroy','publish_date','hideden')
+
+
+admin.site.register(models.Article,ArticleAdmin)
+
+
+
+设置模板：
+settings.py  ('DIRS':[os.path.join(BASE_DIR,"templates")],)
+
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR,"templates")],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+
+
+访问静态文件：
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS=(
+    "%s/%s"%(BASE_DIR,"statics"),
+)
+
+
+pycharm 格式化代码：
+快捷键：ctrl + alt + i
+
+
+
+django1.8 页面跳转：
+
+urls.py 文件设置：
+
+
+urlpatterns = [
+    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$',views.index,name='index'),
+    url(r'^category/(\d+)/$',views.lanmu,name='lanmu'),
+]
+
+其中url(,,name=''),name是设置url别名
+
+在模板文件中通过{% url 'index'%} , {% url 'lanmu' 1 %}调用
+
+数据调用：all(),filter(),get()
+models.Article.objects.all()
+all() 调用 Article 数据库中的所有数据
+
+models.Article.objects.filter(category_id=id)
+filter() 调用 Article 数据库中的 category_id 等于 参数 id 的数据,可用于列表
+
+models.Article.objects.get(id=id)
+get()  调用Article 数据库中文章id=id的文章，
+
+
+模板数据反向查询：
+举个栗子：
+                    {% if request.user.is_authenticated %}  注释：is_authenticated，用django自带的auth系统进行用户是否登录判断
+                    <li class="nav-item">
+                        {{request.user}}  注释：这里会返回 auth_user 表的user字段
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a>Login</a>
+                    </li>
+                    {% endif %}
+
+进行如下修改
+                    {% if request.user.is_authenticated %}  
+                    <li class="nav-item">
+                        {{request.user.userprofile.name}}  注释：这样会根据user去查询 uerprofile 表中的name字段
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a>Login</a>
+                    </li>
+                    {% endif %}
+
+
+RuntimeError at /user/logout/
+
+Exception Value：maximum recursion depth exceeded
+
+def logout(request):
+    logout(request)
+
+错误原因， 自定义函数名logout跟django自带的函数名重名，死循环，
+修改 def log_out(request):
+         logout(request)
+问题解决
+
+
+模板继承
+{% block name %}
+
+{% endblock %}
+
+登录：
+CSRF 跨域处理
+{% csrf_token %}
+
+ 
+
