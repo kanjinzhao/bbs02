@@ -5,13 +5,13 @@
 {% endblock %}
 
 {% block page-container %}
+<script src="/static/ckeditor/ckeditor.js"></script>
 
 <div class="content bg-grday">
-    <div class="container container--sm">
+    <div class="container">
         <h2 class="title">Company details</h2>
-        <form method="POST" action="" accept-charset="UTF-8" enctype="multipart/form-data">
-            <input name="_method" value="PUT" type="hidden">
-            <input name="_token" value="fSnAdtNq8k1QDYfNLNTnRxvyAm4TYOGi5HmPgU7k" type="hidden">
+        <form method="POST" action="{% url 'addart' %}" accept-charset="UTF-8" enctype="multipart/form-data">
+                {% csrf_token %}
             <fieldset>
                 <input name="_redirect" value="https://vuejobs.com/jobs/create" type="hidden">
                 <p>Fill the form below and let us know about your company. This information
@@ -60,8 +60,11 @@
         Description
                     <span>optional</span></label>
                     <div class="controls">
-                        <textarea id="description" name="description" cols="50" rows="10" class="form-control"></textarea>
+                        <textarea id="description" name="content" cols="50" rows="10" class="form-control"></textarea>
                     </div>
+                    <script>
+                        CKEDITOR.replace('content');
+                    </script>
                 </div>
             </fieldset>
             <div class="text-center">

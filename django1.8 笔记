@@ -169,7 +169,7 @@ def logout(request):
 {% endblock %}
 
 登录：
-CSRF 跨域处理
+CSRF 跨域处理,在模板的<form></form> 表单中加入 {% csrf_token %}
 {% csrf_token %}
 
  

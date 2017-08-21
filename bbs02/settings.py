@@ -118,6 +118,4 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS=(
     "%s/%s"%(BASE_DIR,"static"),
-    "%s/%s" % (BASE_DIR, "uploads"),
-
 )
