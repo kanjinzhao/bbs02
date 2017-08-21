@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'web',
     'ckeditor',
+    'ckeditor_uploader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -123,3 +124,4 @@ STATICFILES_DIRS=(
 
 #ckeditor
 CKEDITOR_JQUERY_URL ='/static/ckeditor/ckeditor.js'
+

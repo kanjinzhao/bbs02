@@ -5,7 +5,9 @@
                 <div class="job__desc mt-4">
                     <h2 class="title">{{article.title}}</h2>
                     <div>
-                        {{article.content}}
+                        {% autoescape off %}
+                            {{article.content}}
+                        {% endautoescape %}
                     </div>
 
                 </div>
