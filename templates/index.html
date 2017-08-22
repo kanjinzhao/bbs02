@@ -73,13 +73,18 @@
                         </a>
                         <div class="dropdown-menu" style="font-size: inherit" aria-labelledby="navbarDropdownMenuLink">
 
-                            <a class="dropdown-item" href="{% url 'addart' %}">发帖</a>
 
                             <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
 
                         </div>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'addart' %}" class="nav-lidnk btn btn-success">发贴</a>
+                    </li>
+
                     {% else %}
+
                     <li class="nav-item">
                         <a href="{% url 'login' %}" class="nav-link">Login</a>
                     </li>
@@ -87,9 +92,7 @@
                         <a href="https://vuejobs.com/register" class="nav-link">Register</a>
                     </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a href="https://vuejobs.com/jobs/create" class="nav-lidnk btn btn-success">Post a job</a>
-                    </li>
+
                 </ul>
             </div>
         </div>
@@ -114,36 +117,19 @@
                 </div>
             </div>
 
-            <ul class="flex-wrap flex-md-nowrap justify-content-center justify-content-md-start mb-3 mb-md-0 nav nav-tabs mt-md-4" style="position: relative; bottom: -1px">
-                <li class="nav-item">
-                    <a class="nav-link active" href="https://vuejobs.com" role="tab">All jobs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://vuejobs.com/full-time-vuejs-jobs"
-                       role="tab">Full-time</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://vuejobs.com/part-time-vuejs-jobs" role="tab">Part-time</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://vuejobs.com/freelance-vuejs-jobs" role="tab">Freelance</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://vuejobs.com/temporary-vuejs-jobs" role="tab">Temporary</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://vuejobs.com/internship-vuejs-jobs" role="tab">Internship</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="https://vuejobs.com/remote-vuejs-jobs" role="tab">Remote</a>
-                </li>
-            </ul>        </div>
+            <ul>
+
+            </ul>
+        </div>
     </div>
 
 {% endblock %}
 
 
     <div class="content pt-0">
+{% block page-art-fujia %}
+{% endblock %}
+
         <div class="container">
             <div class="row">
 

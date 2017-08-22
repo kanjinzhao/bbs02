@@ -1,17 +1,51 @@
 {% extends 'index.html' %}
 
-{% block page-container %}
- <div class="main pt-3">
-                <div class="job__desc mt-4">
-                    <h2 class="title">{{article.title}}</h2>
-                    <div>
-                        {% autoescape off %}
-                            {{article.content}}
-                        {% endautoescape %}
-                    </div>
+{% block page-banner %}
 
+<div class="job__header"><div class="container">
+    <div class="job__fixed-top"><a href="https://vuejobs.com" class="btn btn-sm job__view-all" style="letter-spacing: 0px;">← Back to
+    all
+    jobs</a></div> <div class="row"><div class="main d-flex align-items-center"><div class="job__heading mr-4"><div class="job__avatar"><img src="/storage/avatars/YaZAjtCpbwfG8eB2Ev0fxko1bNeSNq3keN4wV57L.png" alt="Logo of Capsule8" class="rounded"></div></div> <div class="job__head"><h1 class="job__title displayd-4 mb-1">Front-end Engineer</h1> <span class="text-muted">at</span> <span class="job__company font-weight-bold">Capsule8</span>
+    - <a target="_blank" href="http://www.capsule8.com" class="job__website text-success small"><i class="fa fa-external-link"></i> Visit company website</a></div></div> <div class="sidebar mt-3 mb-3 m-lg-0 p-2 bg-gray-light rounded"><div class="main-carbon"></div><div id="advertisement" class="sidebar-box">
+    <script async="" type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&amp;serve=C6AILKT&amp;placement=vuejobscom" id="_carbonads_js"></script><div id="carbonads"><span><span class="carbon-wrap"><a href="https://changelly.com?ref_id=9066aff83115" class="carbon-img" target="_blank" rel="noopener"><img src="//fallbacks.carbonads.com/nosvn/fallbacks/f9da3e004ac861938e5d51aae7a31da9.png" alt="" style="max-width: 130px;" border="0" width="130" height="100"></a><a href="https://changelly.com?ref_id=9066aff83115" class="carbon-text" target="_blank" rel="noopener">Changelly - Exchange cryptocurrency at the best rate</a></span></span></div>
+</div></div></div></div></div>
+
+{% endblock %}
+{% block page-art-fujia %}
+
+<div class="bg-gray">
+    <div class="container">
+        <div class="job-info">
+            <div class="d-flex flex-column flex-md-row justify-content-start align-items-centder">
+                <div class="job-info__block job__location">
+                    <div>作者</div>
+                    <span>{{ author.name }}</span>
                 </div>
- </div>
+
+                <div class="job-info__block job__posted-at">
+                <div>Posted</div>
+                <span>{{article.publish_date}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block page-container %}
+<div class="main pt-3">
+    <div class="job__desc mt-4">
+
+        <h2 class="title">{{article.title}}</h2>
+
+        <div>
+            {% autoescape off %}
+            {{article.content}}
+            {% endautoescape %}
+        </div>
+
+    </div>
+</div>
 
 
 {% endblock %}
@@ -19,57 +53,57 @@
 {% block page-right %}
 
 
-                <div class="sidebar__row job__interest bg-gray">
-                    <a  href="mailto:join@regily.com"
-                        class="btn btn-block btn-danger">Apply now!</a>
-                    <hr>
-                    <h5>Are you interested in this position?</h5>
-                    <div>Make sure you have read the <a href="#how-to-apply" class="font-italic">How to Apply</a>
-                        section.
-                    </div>
-                </div>
+<div class="sidebar__row job__interest bg-gray">
+    <a  href="mailto:join@regily.com"
+        class="btn btn-block btn-danger">Apply now!</a>
+    <hr>
+    <h5>Are you interested in this position?</h5>
+    <div>Make sure you have read the <a href="#how-to-apply" class="font-italic">How to Apply</a>
+        section.
+    </div>
+</div>
 
-                <div class="sidebar__row job__share">
-                    <div class="share share--list">
-                        <h3>Spread the word!</h3>
+<div class="sidebar__row job__share">
+    <div class="share share--list">
+        <h3>Spread the word!</h3>
 
-                        <div class="social-links d-flex flex-column">
-                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer"
-                               class="social-link social-facebook">
-                                <i class="fa fa-fw fa-facebook"></i> Share on Facebook
-                            </a>
-                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;text=Passionate%20frontend%20developer"
-                               class="social-link social-twitter">
-                                <i class="fa fa-fw fa-twitter"></i> Tweet this job
-                            </a>
-                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer&amp;mini=true"
-                               class="social-link social-linkedin">
-                                <i class="fa fa-fw fa-linkedin"></i> Post on LinkedIn
-                            </a>
-                            <a href="whatsapp://send?text=Passionate%20frontend%20developer%20https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
-                               class="social-link social-whatsapp">
-                                <i class="fa fa-fw fa-whatsapp"></i> Message on WhatsApp
-                            </a>
-                            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://plus.google.com/share?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
-                               class="social-link social-google">
-                                <i class="fa fa-fw fa-google-plus"></i> Share on Google
-                            </a>
-                        </div>
+        <div class="social-links d-flex flex-column">
+            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer"
+               class="social-link social-facebook">
+                <i class="fa fa-fw fa-facebook"></i> Share on Facebook
+            </a>
+            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;text=Passionate%20frontend%20developer"
+               class="social-link social-twitter">
+                <i class="fa fa-fw fa-twitter"></i> Tweet this job
+            </a>
+            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer&amp;mini=true"
+               class="social-link social-linkedin">
+                <i class="fa fa-fw fa-linkedin"></i> Post on LinkedIn
+            </a>
+            <a href="whatsapp://send?text=Passionate%20frontend%20developer%20https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
+               class="social-link social-whatsapp">
+                <i class="fa fa-fw fa-whatsapp"></i> Message on WhatsApp
+            </a>
+            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://plus.google.com/share?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
+               class="social-link social-google">
+                <i class="fa fa-fw fa-google-plus"></i> Share on Google
+            </a>
+        </div>
 
-                    </div>                </div>
-
-
+    </div>                </div>
 
 
 
 
-                <div class="sidebar__row job__newsletter">
-                    <h3>Vue.js resources</h3>
-                    <ul class="list-unstyled">
-                        <li><a target="_blank" href="https://vuejsfeed.com/">Vue.js Feed</a></li>
-                        <li><a target="_blank" href="https://vue.threadless.com/">The Vue Shop</a></li>
-                    </ul>
-                </div>
+
+
+<div class="sidebar__row job__newsletter">
+    <h3>Vue.js resources</h3>
+    <ul class="list-unstyled">
+        <li><a target="_blank" href="https://vuejsfeed.com/">Vue.js Feed</a></li>
+        <li><a target="_blank" href="https://vue.threadless.com/">The Vue Shop</a></li>
+    </ul>
+</div>
 
 
 {% endblock %}

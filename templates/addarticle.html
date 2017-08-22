@@ -9,66 +9,57 @@
 
 <div class="content bg-grday">
     <div class="container">
-        <h2 class="title">Company details</h2>
+        {{err}}
+        <h2 class="title">添加文章</h2>
         <form method="POST" action="{% url 'addart' %}" accept-charset="UTF-8" enctype="multipart/form-data">
                 {% csrf_token %}
             <fieldset>
-                <input name="_redirect" value="https://vuejobs.com/jobs/create" type="hidden">
-                <p>Fill the form below and let us know about your company. This information
-                is required before posting a new job.</p>
                 <div id="field_name" class="form-group">
-                    <label for="name" class="form-control-label">Company name</label>
+                    <label for="name" class="form-control-label">Title</label>
                 <div class="controls">
-                    <input required="required" placeholder="Your company name" id="name" name="name" class="form-control" type="text">
+                    <input  placeholder="Title"  name="title" class="form-control" type="text">
                 </div>
+                    <span style="color:#ef4315">{{ errs.title }}</span>
                 </div>
 
                 <div id="field_name" class="form-group">
                     <label for="name" class="form-control-label">栏目</label>
                 <div class="controls">
-                    <select>
-                        {% for lanmu in category %}
-                        <option value="{{lanmu.id}}">{{lanmu.name}}</option>
-                        {% endfor %}
+                        <select name="categroy_id" class="btn btn-secondary btn-file">
+                            {% for lanmu in category %}
+                            <option value="{{lanmu.id}}">{{lanmu.name}}</option>
+                            {% endfor %}
 
-                    </select>
+                        </select>
 
                 </div>
                 </div>
 
 
                 <div class="form-group">
-                    <label class="form-control-label">Company logo</label>
-                    <div class="form-text small">Any kind of image: SVG, PNG, JPG...</div>
+                    <label class="form-control-label">缩略图</label>
                     <span role="img" class="account-company__avatar " style="background-image: url(&quot;&quot;);"></span>
-                    <div><label class="btn btn-secondary btn-file">
-                        <i class="fa fa-image"></i>Select logo
-                <input name="avatar" id="company-avatar" type="file">
-                    </label>
-                    </div>
-                </div>
-                <div id="field_website" class="form-group">
-                    <label for="website" class="form-control-label">
-        Website
-                    <span>optional</span></label>
-                    <div class="controls">
-                        <input placeholder="The company website" id="website" name="website" class="form-control" type="text">
+                    <div>
+
+                        <label class="btn btn-secondary btn-file">
+                            <i class="fa fa-image"></i>Select Pic<input name="head_img"  type="file">
+                        </label>
+                        <span style="color:#ef4315">{{ errs.head_img }}</span>
                     </div>
                 </div>
                 <div id="field_description" class="form-group">
-                    <label for="description" class="form-control-label">
-        Description
-                    <span>optional</span></label>
                     <div class="controls">
                         <textarea id="description" name="content" cols="50" rows="10" class="form-control"></textarea>
                     </div>
                     <script>
                         CKEDITOR.replace('content');
                     </script>
+                    <span style="color:#ef4315">{{ errs.content }}</span>
                 </div>
             </fieldset>
             <div class="text-center">
-                <button class="btn btn-success"><i class="fa fa-arrow-right"></i>Next step</button>
+                <input type="submit" value="Save" class="btn btn-success">
+              <!-- <button class="btn btn-success"><i class="fa fa-arrow-right"></i>Next step</button>-->
             </div>
         </form>
     </div>
