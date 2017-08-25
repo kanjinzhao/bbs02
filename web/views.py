@@ -25,7 +25,7 @@ def article(req,id):
 
     try:
         artilce = models.Article.objects.get(id=id)
-        author  = models.UserProfile.objects.get(id=artilce.author_id)
+        author = models.UserProfile.objects.get(id=artilce.author_id)
 
     except ObjectDoesNotExist as e:
 
