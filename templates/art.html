@@ -1,5 +1,8 @@
 {% extends 'index.html' %}
 
+{% load custom_tags %}
+
+
 {% block page-banner %}
 
 <div class="job__header"><div class="container">
@@ -45,6 +48,10 @@
         </div>
 
     </div>
+
+            {% build_comment_tree article_obj.comment_set.select_related %}
+
+
 </div>
 
 
