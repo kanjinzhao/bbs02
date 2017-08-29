@@ -25,7 +25,7 @@ def make_html(son_comment_dic,margin_val):
 
         user = str(k.user)
 
-        html += "<div style='margin-left:%spx;margin-top:5px;' class='position--genuine featured-sign'>" % margin_val +"<span>" + user + ":</span>" + k.comment + "</div>"
+        html += "<div style='margin-left:%spx;margin-top:5px;' class='position--genuine featured-sign'>" % margin_val +"<span>" + user + ":</span>" + k.comment +"<a href='' class='huifu'>回复</a>" + "</div>"
 
         if v_dic:
             html += make_html(v_dic,margin_val+15)
@@ -61,7 +61,7 @@ def build_comment_tree(comment_list):
         datetime = str(k.date)
 
 
-        html += "<div class='position position--genuine featured-sign position--featured'>" + "<span class='commuser'>" + user + ":</span>" + k.comment + "<span class='commtime'>"+ datetime +"</span>" +"</div>"
+        html += "<div class='position position--genuine featured-sign position--featured'>" + "<span class='commuser'>" + user + ":</span>" + k.comment + "<span class='commtime'>"+ datetime +"</span>" +"<a href='' class='huifu'>回复</a>"  +"</div>"
         html += make_html(v,margin_lef+15)
 
     html += "</div>"
