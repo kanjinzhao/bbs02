@@ -23,6 +23,7 @@ def lanmu(req,id):
 
 def article(req,id):
 
+    errs=''
     #提交评论
     if req.method == "POST":
         form = CommentForm(req.POST)
@@ -33,6 +34,8 @@ def article(req,id):
             print form_data
             new_comment_obj = models.Comment(**form_data)
             new_comment_obj.save()
+        else:
+            errs='请填写评论内容'
 
 
 
@@ -44,7 +47,7 @@ def article(req,id):
 
         return render(req,'404.html',{'msg':u'文章不存在！'})
 
-    return render(req,'art.html',{'article':artilce,'author':author})
+    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs})
 
 
 
@@ -94,3 +97,6 @@ def add_art(req):
         category = models.Category.objects.all()
         return render(req,'addarticle.html',{'category':category,'errs':errs})
 
+
+def register(req):
+    return render(req,'register.html')

@@ -50,11 +50,17 @@
     </div>
     <div class="job__desc mt-4">
         <hr>
-
+        <div class="red">{{errs}}</div>
         <div>
             <form action="{% url 'article' article.id %}" method="post" name="">
                  {% csrf_token %}
-                 <textarea name="comment" class="form-control form-control-lg" placeholder="添加回复"></textarea>
+                 <textarea    {% if request.user.is_authenticated %}
+                                    placeholder="添加回复"
+                              {% else %}
+                                    disabled="disabled"     placeholder="登录后添加回复"
+
+                              {% endif %}
+                         name="comment" class="form-control form-control-lg" ></textarea>
 
                  <input class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
 

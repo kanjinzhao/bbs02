@@ -25,7 +25,7 @@ def make_html(son_comment_dic,margin_val):
 
         user = str(k.user)
 
-        html += "<div style='margin-left:%spx;margin-top:5px;' class='position--genuine featured-sign'>" % margin_val +"<span>" + user + ":</span>" + k.comment +"<a href='' class='huifu'>回复</a>" + "</div>"
+        html += "<div style='margin-left:%spx;margin-top:5px;' class='position position--genuine featured-sign'>" % margin_val +"<span>" + user + ":</span>" + k.comment +"<a href='' class='huifu'>回复</a>" + "</div>"
 
         if v_dic:
             html += make_html(v_dic,margin_val+15)

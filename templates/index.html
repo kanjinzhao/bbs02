@@ -18,6 +18,7 @@
     <link href="/static/css/quill.core.min.css" rel="stylesheet">
     <link href="/static/css/quill.snow.css" rel="stylesheet">
     <link href="/static/css/css_app.css" rel="stylesheet">
+    <link href="/static/css/bbs.css" rel="stylesheet">
 
 
 </head>
@@ -89,7 +90,7 @@
                         <a href="{% url 'login' %}" class="nav-link">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://vuejobs.com/register" class="nav-link">Register</a>
+                        <a href="{% url 'register' %}" class="nav-link">Register</a>
                     </li>
                     {% endif %}
 
