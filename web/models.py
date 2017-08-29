@@ -47,7 +47,7 @@ class Comment(models.Model):
     user = models.ForeignKey("UserProfile")
     comment = models.TextField(max_length=2000)
     date = models.DateTimeField(auto_now=True)
-    parent_commment = models.ForeignKey('self',related_name='p_comment',blank=True,null=True)
+    parent_comment = models.ForeignKey('self',related_name='p_comment',blank=True,null=True)
 
     def __unicode__(self):
         return "<%s,user:%s>" %(self.comment,self.user)

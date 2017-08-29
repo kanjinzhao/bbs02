@@ -46,7 +46,7 @@ django1.8
 迁移数据库
 python manage.py migrate
 python manage.py makemigrations
-python manage.py migrage
+python manage.py migrate
 
 创建管理员
 python mange.py createsuperuser
@@ -194,4 +194,16 @@ Django的模板中会对HTML标签和JS等语法标签进行自动转义，原�
 
 
 
+文件编码问题：
+'ascii' codec can't decode byte 0xe7 in position 92: ordinal not in range(128)
+python2 默认编码是ascii
+需要 str->unicode 的代码，可以在前边写上
+
+import sys
+
+reload(sys)
+
+sys.setdefaultencoding(‘utf8′)
+
+把 str 编码由 ascii 改为 utf8
 

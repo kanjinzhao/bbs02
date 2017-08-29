@@ -3,7 +3,7 @@
 from django.shortcuts import render,HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import logout,login,authenticate
-from forms import ArticleForm
+from forms import ArticleForm,CommentForm
 
 
 import models
@@ -23,6 +23,19 @@ def lanmu(req,id):
 
 def article(req,id):
 
+    #提交评论
+    if req.method == "POST":
+        form = CommentForm(req.POST)
+        if form.is_valid():
+            form_data = form.cleaned_data
+            form_data['user_id'] = req.user.userprofile.id
+            form_data['article_id'] = id
+            print form_data
+            new_comment_obj = models.Comment(**form_data)
+            new_comment_obj.save()
+
+
+
     try:
         artilce = models.Article.objects.get(id=id)
         author = models.UserProfile.objects.get(id=artilce.author_id)
@@ -33,6 +46,10 @@ def article(req,id):
 
     return render(req,'art.html',{'article':artilce,'author':author})
 
+
+
+
+
 def log_out(request):
     logout(request)
     return HttpResponseRedirect('/')
@@ -42,7 +59,7 @@ def log_in(req):
     err_msg = ""
 
     if req.method == "POST":
-        print ('user login')
+       # print ('user login')
         username = req.POST.get('username')
         password = req.POST.get('password')
         user = authenticate(username = username,password = password)
@@ -54,11 +71,12 @@ def log_in(req):
 
     return render(req,'login.html',{'err_msg':err_msg})
 
+#发帖
 def add_art(req):
     errs=''
 
     if req.method == "POST":
-        print(req.POST)
+        #print(req.POST)
         form = ArticleForm(req.POST,req.FILES)
         if form.is_valid():
             #print ("--form data:",form.cleaned_data)
@@ -75,3 +93,4 @@ def add_art(req):
     if req.user.userprofile.id:
         category = models.Category.objects.all()
         return render(req,'addarticle.html',{'category':category,'errs':errs})
+

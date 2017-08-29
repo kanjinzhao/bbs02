@@ -48,9 +48,29 @@
         </div>
 
     </div>
+    <div class="job__desc mt-4">
+        <hr>
 
-            {% build_comment_tree article_obj.comment_set.select_related %}
+        <div>
+            <form action="{% url 'article' article.id %}" method="post" name="">
+                 {% csrf_token %}
+                 <textarea name="comment" class="form-control form-control-lg" placeholder="添加回复"></textarea>
 
+                 <input class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
+
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="job__desc mt-4">
+       <label>查看评论</label>
+            {% build_comment_tree article.comment_set.select_related %}
+    </div>
 
 </div>
 
