@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>#1 Vue.js job board - Looking for a Vue.js job or hiring a Vue.js developer? - Vue.js Jobs</title>
+
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href="/static/css/fonts.css" rel="stylesheet">
+    <link href='/static/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+    <link href="/static/css/quill.core.min.css" rel="stylesheet">
+    <link href="/static/css/quill.snow.css" rel="stylesheet">
+    <link href="/static/css/css_app.css" rel="stylesheet">
+    <link href="/static/css/bbs.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div class="wrapper" id="app">
+
+    <nav class="navigation navbar navbar-light navbar-toggleable-md">
+
+        <div class="container ml-0 mr-0 ml-sm-auto mr-sm-auto">
+
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="/img/vuejobs-logo.svg" width="120" alt="网站logo">
+            </a>
+
+            <button class="navbar-toggler navbar-toggler-right small border-0" type="button" data-toggle="collapse" data-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span> <small>Menu</small>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mobileMenu">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="{% url 'lanmu' 1 %}" class="">栏目1</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'lanmu' 2 %}" class="nav-link">栏目2</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            Resources
+                        </a>
+                        <div class="dropdown-menu" style="font-size: inherit" aria-labelledby="navbarDropdownMenuLink">
+                            <h6 class="dropdown-header font-weight-bold">News and tutorials</h6>
+                            <a class="dropdown-item" href="https://vuejsfeed.com">Vue.js Feed</a>
+                            <h6 class="dropdown-header font-weight-bold">Newsletter</h6>
+                            <a class="dropdown-item" href="http://vue-newsletter.com/">Vue Newsletter</a>
+                            <h6 class="dropdown-header font-weight-bold">Books</h6>
+                            <a class="dropdown-item" href="https://leanpub.com/vuejs2">The majesty of Vue.js 2</a>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav navbar-right ml-md-auto">
+                    {% if request.user.is_authenticated %}
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="false">
+                            {{request.user.userprofile.name}}
+                        </a>
+                        <div class="dropdown-menu" style="font-size: inherit" aria-labelledby="navbarDropdownMenuLink">
+
+
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'addart' %}" class="nav-lidnk btn btn-success">发贴</a>
+                    </li>
+
+                    {% else %}
+
+                    <li class="nav-item">
+                        <a href="{% url 'login' %}" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'register' %}" class="nav-link">Register</a>
+                    </li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+{% block page-banner %}
+    <div class="page-header text-center text-sm-left bg-gray pb-0">
+        <div class="container container--smx">
+            <div class="row align-items-center">
+                <div class="main">
+                    <h1 class="display-4">
+                        Find Vue.js jobs all around the world
+                    </h1>
+                    <p class="text-lg">
+                        Hiring Vue.js developers? Post a job and let us do the rest.
+                    </p>
+                    <a href="https://vuejobs.com/jobs/create" class="btn btn-danger btn-lg">Post a job</a>
+                    <div class="small mt-1">Get started in seconds</div>
+                </div>
+                <div class="sidebar mt-3 mb-3 m-lg-0 p-2 bg-gray-light rounded">
+                    <div class="main-carbon"></div>
+                </div>
+            </div>
+
+            <ul>
+
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+    <div class="content pt-0">
+{% block page-art-fujia %}
+{% endblock %}
+
+        <div class="container">
+            <div class="row">
+
+{% block page-container %}
+
+                <div class="main">
+                    <div class="mb-5">
+                        <section class="positions">
+                            <div class="list-bar d-flex mb-3 align-items-center justify-content-center justify-content-md-end float-none float-md-right">
+                                <div class="linkedin-follow-us mr-2" style="height: 20px">
+                                    <script type="IN/FollowCompany" data-id="11177484"></script>
+                                </div>
+                                <a class="social-link social-twitter"
+                                   href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fvuejobs.dev%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=vuejsjob&tw_p=followbutton">
+                                    <i class="fa fa-twitter"></i> Follow @vuejsjob
+                                </a>
+                                <a target="_blank" class="social-link social-rss" href="/feed"
+                                   class="smaldl text-muted mr-2"><i
+                                        class="fa fa-rss"></i>
+                                    Subscribe to RSS</a>
+                            </div>
+
+                            <h2 class="title">
+                                All Vue.js jobs
+                            </h2>
+
+
+
+                            {% for article in articles.object_list %}
+
+                            <div class="position position--genuine featured-sign ">
+
+                                <div class="d-flex align-items-center">
+
+
+                                    <div class="position__company text-center">
+
+                                        <IMG src="/{{ article.head_img }}">
+
+                                    </div>
+
+
+                                    <div class="position__info w-100">
+                                        <div class="d-flex justify-content-between align-items-center" style="position: relative;">
+                                            <div class="position__title">
+
+                                                <a href="{% url 'article' article.id %}" class="font-weight-bold">{{ article.title }}</a>
+
+
+                                                <div class="position__location text-muted small">
+                                                    at <a href="https://vuejobs.com/company/qwire" class="font-weight-bold">Qwire</a> –
+                                                    <span class="text-capitalize">Remote</span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="hidden-xs-down position__type small text-right text-muted" style="z-index: 1000">
+                                                <a href="https://vuejobs.com/full-time-vuejs-jobs" class="font-weight-bold">Full-time</a><br>
+                                                Student
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {% endfor %}
+
+
+
+
+
+
+
+                        </section>
+                    </div>
+
+                    <div class="mb-3">
+
+                        <!--分页start-->
+
+                        <div class="pagination pagination-centered">
+                          <ul>
+                            {% if articles.has_previous %}
+                            <li><a href="?page={{ articles.previous_page_number }}">前一页</a></li>
+                            {% endif %}
+
+                            {% for p in page_range %}
+                              {% ifequal p articles.number %}
+                              <li class="active"><a>{{p}}</a></li>
+                              {% else %}
+                              <li><a href="?page={{p}}" title="第{{p}}页">{{p}}</a><li>
+                              {% endifequal %}
+                            {% endfor %}
+
+                            {% if articles.has_next %}
+                            <li><a href="?page={{ articles.next_page_number }}">后一页</a></li>
+                            {% endif %}
+                          </ul>
+                        </div>
+                        <!--分页end-->
+
+
+
+                        <h3 class="title"><i class="fa fa-search"></i> Perform your own search</h3>
+                        <positions></positions>
+                    </div>
+                </div>
+{% endblock %}
+
+
+                <div class="sidebar">
+                    {% block page-right %}
+
+                        <div class="sidebar__row bg-warning-lighter featured-sign">
+                            <div class="featured-sign__message bg-inverse">
+                                <i class="fa fa-star text-warning"></i> Featured job!
+                            </div>
+                            <div class="featured-job bg- pt-3 rounded text-center">
+
+                                <div class="mb-2">
+                                    <img src="/storage/avatars/VMhOrTyNiIeHGQOpIlYRANQwiWtdL7WehRm4xxaB.png" class="rounded" style="max-width: 55px; height: auto;" alt="Pitchup.com logo">
+                                </div>
+                                <a href="https://vuejobs.com/jobs/147-javascript-developer" class="d-block font-weight-bold">
+                                    Javascript Developer
+                                </a>
+                                <div class="small text-muted">at <span class="font-weight-bold">Pitchup.com</span> – London, United Kingdom, Remote Allowed</div>
+                            </div></div>
+
+
+
+
+
+
+
+                        <div class="sidebar__row">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/img/newsletter/email-2.svg" class="mr-3" style="max-width: 40px; max-height: 35px" alt="">
+                                <h6 class="mb-0">Get the best of our listings into your inbox</h6>
+                            </div>
+                            <newsletter :show-form-labels="false" btn-class="btn-inverse btn-sm"
+                                        form-control-class="form-control-sm"></newsletter>
+                        </div>
+                        <div class="sidebar__row bg-gray rounded text-dwhite textd-center">
+                            <div class="d-flex align-items-center mb-2">
+                                <img src="/img/jobs/search-2.svg" class="mr-2"
+                                     style="max-width: 40px; max-height: 35px; transform: rotate(-35deg);" alt="">
+                                <h5 class="mb-0">Hire your Vue.js developer</h5>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-star text-warning fa-fw"></i> 100% money-back guaranteed</li>
+                                <li><i class="fa fa-star text-warning fa-fw"></i> Reach to thousands of Vuers</li>
+                            </ul>
+                            <hr>
+
+                            <a href="https://vuejobs.com/jobs/create" class="btn btn-block btn-danger">Post a job!</a>
+                            <div class="mt-1 text-center">
+                                or <a href="https://vuejobs.com/pricing">View pricing</a>
+                            </div>
+                        </div>
+
+                        <div class="sidebar__row">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/img/startup.svg" class="mr-2" style="max-width: 40px; max-height: 50px" alt="">
+                                <h6>Be the first to know about our new listings!</h6>
+                            </div>
+
+                            <div class="share share--list">
+                                <div class="social-links d-flex flex-column">
+                                    <a href="/feed" class="social-link social-linkedin"><i class="fa fa-fw fa-rss"></i>
+                                        Subscribe to our RSS
+                                    </a>
+                                    <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fvuejobs.dev%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=vuejsjob&tw_p=followbutton"
+                                       target="_blank" class="social-link social-twitter"><i class="fa fa-fw fa-twitter"></i>
+                                        Follow @VuejsJob
+                                    </a>
+                                    <a href="http://facebook.com/vuejsjobs" target="_blank" class="social-link social-facebook"><i
+                                            class="fa fa-fw fa-facebook"></i> Like us on Facebook
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar__row bg-gray rounded featured-sign">
+                            <div class="featured-sign__message featured-sign__message--dsm bg-inverse">Featured resource!</div>
+                            <div class="the-majesty-of-vuejs-2 pt-3">
+                                <p>Do you want to learn Vue.js 2 from scratch? Check out <a href="https://leanpub.com/vuejs2" target="_blank">The Majesty of Vue.js 2</a>.</p>
+
+                                <p class="text-center">
+                                    <a href="https://leanpub.com/vuejs2" target="_blank">
+                                        <img class="rounded" width="100px" src="/img/misc/vuejs2-book.jpg" alt="The Majesty of Vue.js 2 book cover">
+                                    </a>
+                                </p>
+                                <div class=" text-center">From the guys of <a target="_blank" href="https://vuejsfeed.com">Vue.js Feed</a>.</div>
+                            </div></div>            </div>
+
+
+                {% endblock %}
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="pt-5 pb-5">
+        <div class="container">
+            <div class="trusted-us">
+                <h3 class="mb-4 text-center">Some companies that have trusted us</h3>
+
+                <div class="d-flex flex-column flex-md-row align-items-center justify-content-around flex-wrap">
+                    <a class="mb-3 w-25" target="_blank" href="https://gitlab.com">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 70px">
+                            <img src="/img/trusted-us/gitlab-logo.svg" height="45px" alt="GitLab logo">
+                        </div>
+                    </a>
+
+                    <a class="mb-3 w-25" target="_blank" href="https://apiary.io/">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 70px">
+                            <img src="/img/trusted-us/oracle-logo.svg" height="25px" alt="Oracle logo">
+                        </div>
+                    </a>
+
+                    <a class="mb-3 w-25" target="_blank" href="https://chess.com">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 70px">
+                            <img src="/img/trusted-us/chesscom-logo.png" height="45px" alt="Chess.com logo">
+                        </div>
+                    </a>
+
+                    <a class="mb-3 w-25" target="_blank" href="https://www.noip.com">
+                        <div class="d-flex justify-content-center align-items-center" style="height: 70px">
+                            <img src="/img/trusted-us/noip-logo.png" height="45px" alt="No-IP logo">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="content-info">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <a href="https://vuejobs.com/jobs/create" class="btn btn-danger btn-smd btn-block">Post a job</a>
+                    <div class="mt-2 mb-2">100% satisfaction guaranteed</div>
+                    <a href="https://vuejobs.com/pricing" class="btn btn-sm btn-outline-danger">View pricing</a>
+
+
+                </div>
+                <div class="offset-md-1 col-md-2">
+                    <ul class="list-unstyled">
+
+                        <li class="nav-link"><a href="https://vuejobs.com/about">About us</a></li>
+                        <li class="nav-link"><a href="https://vuejobs.com/pricing">Pricing</a></li>
+                        <li class="nav-link"><a href="https://vuejobs.com/jobs/create">Post a job</a></li>
+                        <li class="nav-link"><a href="https://vuejobs.com/account">My account</a></li>
+
+
+                        <li class="nav-link"><a href="mailto:hello@vuejobs.com">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Vue.js Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a target="_blank" href="https://vuejsfeed.com/">Vue.js Feed</a></li>
+                        <li><a target="_blank" href="http://vue-newsletter.com/">Vue Newsletter</a></li>
+                        <li><a target="_blank" href="https://leanpub.com/vuejs2">The Majesty of Vue.js 2</a></li>
+                        <li><a target="_blank" href="https://www.patreon.com/evanyou">Support Vue.js development</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow us</h5>
+                    <a target="_blank" href="https://twitter.com/vuejsjob"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+                    <br>
+                    <a target="_blank" href="https://www.linkedin.com/company-beta/11177484/"><i class="fa fa-fw fa-linkedin"></i> LinkedIn</a>
+                    <br>
+                    <a target="_blank" href="https://www.facebook.com/vuejsjobs"><i class="fa fa-fw fa-facebook"></i>
+                        Facebook</a> <br>
+                    <a href="/feed"><i class="fa fa-fw fa-rss"></i> RSS Feed</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- components.newsletter -->
+
+    <div class="modal fade newsletter" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="newsletterModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-success text-white">
+                <div class="modal-body">
+                    <newsletter btn-class="btn-white">
+                        <div class="newsletter-title">
+                            <button slot="cancel" type="button" class="close float-right"
+                                    data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="/img/newsletter/email-2.svg" class="mr-3" style="max-height: 50px" alt="">
+                                <h2 class="mb-0">Join the newsletter</h2>
+                            </div>
+                            <p>Stay in the loop on Vue.js related job positions and get the best of our listings into your
+                                inbox. Issued once per week.</p>
+                        </div>
+                    </newsletter>
+                </div>
+            </div>
+        </div>
+    </div></div>
+
+
+
+
+
+
+<script src="/static/bootstrap/js/jquery-3.1.1.slim.min.js"></script>
+<script src="/static/bootstrap/js/js.bootstrap.min.js"></script>
+
+
+
+
+</body>
+</html>

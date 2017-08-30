@@ -12,3 +12,14 @@ right:0px;
 .red{
 color:#e33814;
 }
+.pagination ul li{
+
+ float:left;
+ margin:5px;
+ display:block;
+ }
+
+ .active a{
+ background-color:#0077b5;
+
+ }
