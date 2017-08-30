@@ -24,8 +24,10 @@ def make_html(son_comment_dic,margin_val):
     for k,v_dic in son_comment_dic.items():
 
         user = str(k.user)
+        datetime = str(k.date)
+        fatherid= str(k.id)
 
-        html += "<div style='margin-left:%spx;margin-top:5px;' class='position position--genuine featured-sign'>" % margin_val +"<span>" + user + ":</span>" + k.comment +"<a href='' class='huifu'>回复</a>" + "</div>"
+        html += "<div style='margin-left:%spx;margin-top:5px;' class='position position--genuine featured-sign'>" % margin_val +"<span>" + "<a href='#' class='social-link social-facebook'>" +user + "</a>:</span>" + k.comment + "<span class='commtime'>"+ datetime +"</span>"  +"<a href='#comment' onclick='set("+ fatherid +")' class='huifu'>回复</a>" + "</div>"
 
         if v_dic:
             html += make_html(v_dic,margin_val+15)
@@ -59,9 +61,10 @@ def build_comment_tree(comment_list):
 
         user = str(k.user)
         datetime = str(k.date)
-
-
-        html += "<div class='position position--genuine featured-sign position--featured'>" + "<span class='commuser'>" + user + ":</span>" + k.comment + "<span class='commtime'>"+ datetime +"</span>" +"<a href='' class='huifu'>回复</a>"  +"</div>"
+        fatherid= str(k.id)
+        if fatherid == 'None':
+            fatherid = ''
+        html += "<div class='position position--genuine featured-sign position--featured'>" + "<span class='commuser'>" +"<a href='#' class='social-link social-facebook'>" +user + "</a>:</span>" + k.comment + "<span class='commtime'>"+ datetime +"</span>" +"<a href='#comment' onclick='set("+ fatherid +")' class='huifu'>回复</a>"  +"</div>"
         html += make_html(v,margin_lef+15)
 
     html += "</div>"

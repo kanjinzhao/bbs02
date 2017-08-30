@@ -11,3 +11,11 @@ class ArticleForm(forms.Form):
 
 class CommentForm(forms.Form):
     comment = forms.CharField(max_length=2000,min_length=2)
+
+
+class RegistForm(forms.Form):
+    username = forms.CharField(max_length=50,min_length=3)
+    name = forms.CharField(max_length=50,min_length=1)
+    email = forms.EmailField()
+    password = forms.CharField()
+    repassword = forms.CharField()

@@ -48,21 +48,26 @@
         </div>
 
     </div>
-    <div class="job__desc mt-4">
+    <div class="job__desc mt-4" id="comment">
         <hr>
         <div class="red">{{errs}}</div>
         <div>
             <form action="{% url 'article' article.id %}" method="post" name="">
                  {% csrf_token %}
-                 <textarea    {% if request.user.is_authenticated %}
-                                    placeholder="添加回复"
-                              {% else %}
-                                    disabled="disabled"     placeholder="登录后添加回复"
-
-                              {% endif %}
-                         name="comment" class="form-control form-control-lg" ></textarea>
+                <input type="hidden" name="fatherid" id="fatherid" value="">
+                   {% if request.user.is_authenticated %}
+                 <textarea    placeholder="添加回复" name="comment" class="form-control form-control-lg" ></textarea>
 
                  <input class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
+                              {% else %}
+
+                 <textarea    disabled="disabled"     placeholder="登录后添加回复" name="comment" class="form-control form-control-lg" ></textarea>
+
+                 <input disabled="disabled"  class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
+
+
+                              {% endif %}
+
 
 
             </form>
@@ -77,6 +82,17 @@
        <label>查看评论</label>
             {% build_comment_tree article.comment_set.select_related %}
     </div>
+
+    <script LANGUAGE="JavaScript">
+        function set(id){
+        if(id != 'None'){
+            $("#fatherid").val(id);
+        }else{
+            $("#fatherid").val("");
+        }
+        }
+
+    </script>
 
 </div>
 

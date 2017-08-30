@@ -3,7 +3,9 @@
 from django.shortcuts import render,HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import logout,login,authenticate
-from forms import ArticleForm,CommentForm
+from forms import ArticleForm,CommentForm,RegistForm
+#注册时导入User表
+from django.contrib.auth.models import User
 
 
 import models
@@ -31,6 +33,7 @@ def article(req,id):
             form_data = form.cleaned_data
             form_data['user_id'] = req.user.userprofile.id
             form_data['article_id'] = id
+            form_data['parent_comment_id'] = req.POST.get('fatherid')
             print form_data
             new_comment_obj = models.Comment(**form_data)
             new_comment_obj.save()
@@ -97,6 +100,39 @@ def add_art(req):
         category = models.Category.objects.all()
         return render(req,'addarticle.html',{'category':category,'errs':errs})
 
-
+#用户注册验证
 def register(req):
-    return render(req,'register.html')
+    errs =''
+    if req.method=="POST":
+        form = RegistForm(req.POST,req.FILES)
+        if form.is_valid():
+            #user表 注册
+            form_data= form.cleaned_data
+            username=form_data['username']
+            isname = models.User.objects.filter(username=username)
+            if len(isname)>0:
+                username=str(username)
+                errs="用户名 "+ username +" 已存在"
+                return render(req, 'register.html', {'err_userame': errs})
+
+            password=form_data['password']
+            repassword=form_data['repassword']
+
+            if password != repassword:
+                errs = "两次输入密码不一致"
+                return render(req, 'register.html', {'err_password': errs})
+
+            email=form_data['email']
+            user = User.objects.create_user(username,email,password)
+            user.save()
+
+            #UserProfile表增加 昵称
+            userprofile = models.UserProfile()
+            userprofile.name = form_data['name']
+            userprofile.user_id = user.id
+            userprofile.save()
+            ok_msg = "注册成功，马上登录"
+            return render(req, 'login.html', {'ok': ok_msg,'username':username})
+        else:
+            errs = form.errors
+    return render(req,'register.html',{'err_msg':errs})

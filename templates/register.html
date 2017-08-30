@@ -12,43 +12,54 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <form method="POST" action="{% url 'login' %}" accept-charset="UTF-8">
+            <form method="POST" action="{% url 'register' %}" accept-charset="UTF-8">
                 {% csrf_token %}
                 <div class="form-group">
                     <label  class="form-control-label">Name</label>
                     <input  placeholder="用户名" name="username" class="form-control form-control-lg" type="text">
+                    <label class="red">{{ err_userame }} {{ err_msg.username }}</label>
                 </div>
+               <div class="form-group">
+                    <label  class="form-control-label">昵称</label>
+                    <input  placeholder="昵称" name="name" class="form-control form-control-lg" type="text">
+                    <label class="red">{{ err_msg.name }}</label>
+                </div>
+
                 <div class="form-group">
                     <label  class="form-control-label">E-Mail Address</label>
-                    <input  placeholder="用户名" name="username" class="form-control form-control-lg" type="text">
+                    <input  placeholder="邮箱" name="email" class="form-control form-control-lg" type="text">
+                    <label class="red">{{ err_msg.email }}</label>
                 </div>
 
                 <div class="form-group">
                     <label  class="form-control-label">Password</label>
                     <input  name="password" value="" class="form-control form-control-lg" type="password">
+                    <label class="red">{{ err_password }} {{ err_msg.password }}</label>
                 </div>
                  <div class="form-group">
                     <label  class="form-control-label">Confirm Password</label>
-                    <input  name="password" value="" class="form-control form-control-lg" type="password">
+                    <input  name="repassword" value="" class="form-control form-control-lg" type="password">
+                    <label class="red">{{ err_msg.repassword }}</label>
                 </div>
 
                 <div class="form-group mb-3">
                     <label class="custom-control custom-checkbox">
-                        <input name="remember" class="custom-control-input" type="checkbox">
+                       <!--  <input name="remember" class="custom-control-input" type="checkbox">
                         <span class="custom-control-indicator"></span>
-                        <span class="custom-control-description">Remember me</span>
+                       <span class="custom-control-description">Remember me</span> -->
                     </label>
                 </div>
                 <input type="submit" value="Let's start!" class="btn btn-danger btn-block btn-lg mt-2">
-                </input>
             </form>
             {{ err_msg }}
         </div>
     </div>
+    <!--
     <div class="mt-4 text-center">
         <p class="small mb-3">Don't have an account? <br> <a href="https://vuejobs.com/register" class="btn btn-sm btn-outline-secondary">Register now!</a></p>
         <p class="small">Forgot your password? <a href="https://vuejobs.com/password/reset">Reset it here</a>.</p>
     </div>
+    -->
 </div>
 
 
