@@ -4,7 +4,7 @@
 
 
 {% block page-banner %}
-
+<!--
 <div class="job__header">
     <div class="container">
     <div class="job__fixed-top">
@@ -42,6 +42,7 @@
                     </div>
 </div></div></div></div>
 </div>
+-->
 
 {% endblock %}
 {% block page-art-fujia %}
@@ -109,7 +110,7 @@
 
 
     <div class="job__desc mt-4">
-       <label>查看评论</label>
+       <label>查看评论（已有{{ sum_com }}人吐槽）</label>
             {% build_comment_tree article.comment_set.select_related %}
     </div>
 

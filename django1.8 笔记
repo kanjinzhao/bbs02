@@ -207,3 +207,24 @@ sys.setdefaultencoding(‘utf8′)
 
 把 str 编码由 ascii 改为 utf8
 
+
+
+jieba 中文分词工具
+
+安装：
+1、全自动安装 easy_install jieba
+2、半自动安装。 下载安装包，解压后运行 python setup.install
+3、手动安装  将jieba目录放置于当前目录或者site-packages 目录，通过 import jieba 引用
+
+Python文件代码：
+
+import jieba
+
+seg_list = jieba.cut("我来到北京清华大学",cut_all=True)
+print "Full Mode:", "/ ".join(seg_list) #全模式
+
+seg_list = jieba.cut("我来到北京清华大学",cut_all=False)
+print "Default Mode:", "/ ".join(seg_list) #默认模式
+
+seg_list = jieba.cut("他来到了网易杭研大厦")
+print ", ".join(seg_list)

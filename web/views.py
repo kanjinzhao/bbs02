@@ -79,11 +79,16 @@ def article(req,id):
         artilce = models.Article.objects.get(id=id)
         author = models.UserProfile.objects.get(id=artilce.author_id)
 
+        #获取评论数
+        comment = models.Comment.objects.filter(article_id=id)
+        #print comment
+        sum_com =len(comment)
+
     except ObjectDoesNotExist as e:
 
         return render(req,'404.html',{'msg':u'文章不存在！'})
 
-    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs})
+    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com})
 
 
 
