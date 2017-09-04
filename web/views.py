@@ -67,7 +67,7 @@ def article(req,id):
             form_data['user_id'] = req.user.userprofile.id
             form_data['article_id'] = id
             form_data['parent_comment_id'] = req.POST.get('fatherid')
-            print form_data
+            #print form_data
             new_comment_obj = models.Comment(**form_data)
             new_comment_obj.save()
         else:
@@ -82,7 +82,7 @@ def article(req,id):
         #拆分关键字
         keywords = artilce.keywords
         keyword = keywords.split(',')
-        print keyword
+        #print keyword
 
 
         #获取评论数
@@ -94,7 +94,7 @@ def article(req,id):
 
         return render(req,'404.html',{'msg':u'文章不存在！'})
 
-    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keyword':keyword})
+    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keywords':keyword})
 
 
 
