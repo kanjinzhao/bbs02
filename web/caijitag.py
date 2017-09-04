@@ -1,12 +1,39 @@
 #coding=utf-8
 import jieba
+from jieba import analyse
 
+tfidf = analyse.extract_tags
 
-seg_list = jieba.cut("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作", cut_all=True)
+textrank = analyse.textrank
+
+text ="普京谈人工智能：行业领先者将称霸全球"
+
+seg_list = jieba.cut(text, cut_all=True)
 print "Full Mode:", "/ ".join(seg_list)  # 全模式
 
-seg_list = jieba.cut("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作", cut_all=False)
+seg_list = jieba.cut(text, cut_all=False)
 print "Default Mode:", "/ ".join(seg_list)  # 默认模式
 
-seg_list = jieba.cut("工信处女干事每月经过下属科室都要亲口交代24口交换机等技术性器件的安装工作")
+seg_list = jieba.cut(text)
 print "/ ".join(seg_list)
+
+
+keywords = tfidf(text)
+
+trkeywords = textrank(text)
+
+print "tfidf分词："
+
+for keyword in keywords:
+    print keyword + "/",
+
+print ""
+
+print "textrank分词："
+
+for keyword in trkeywords:
+    print keyword + "/",
+
+
+str ="agc,雅思报名"
+print str.split("，")

@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^user/logout/',views.log_out,name='logout'),
     url(r'^user/login/',views.log_in,name='login'),
     url(r'^user/addart/',views.add_art,name='addart'),
-    url(r'^user/register/',views.register,name='register')
+    url(r'^user/register/',views.register,name='register'),
+    url(r'^tags/(.*)',views.tags,name='tags'),
 
 ]

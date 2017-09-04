@@ -79,6 +79,12 @@ def article(req,id):
         artilce = models.Article.objects.get(id=id)
         author = models.UserProfile.objects.get(id=artilce.author_id)
 
+        #拆分关键字
+        keywords = artilce.keywords
+        keyword = keywords.split(',')
+        print keyword
+
+
         #获取评论数
         comment = models.Comment.objects.filter(article_id=id)
         #print comment
@@ -88,7 +94,7 @@ def article(req,id):
 
         return render(req,'404.html',{'msg':u'文章不存在！'})
 
-    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com})
+    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keyword':keyword})
 
 
 
@@ -174,3 +180,9 @@ def register(req):
         else:
             errs = form.errors
     return render(req,'register.html',{'err_msg':errs})
+
+
+#关键字标签
+def tags(req,tag):
+    print tag
+    return render(req,'search.html',{'tag':tag})

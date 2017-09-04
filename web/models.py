@@ -11,6 +11,7 @@ class Article(models.Model):
     '''
     title = models.CharField(u"文章标题",max_length=255,unique=True)
     categroy = models.ForeignKey("Category",verbose_name=u"板块")
+    keywords = models.CharField(u'文章关键字',max_length=255,default="")
     head_img = models.ImageField(u"缩略图",upload_to="static/uploads")
     #content = models.TextField(u"文章内容",)
     content = RichTextField(blank=True,null=True,verbose_name="文章内容")

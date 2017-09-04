@@ -77,7 +77,9 @@
             {{article.content}}
             {% endautoescape %}
         </div>
-
+        {% for keyword in keyword %}
+           <a href="{% url 'tags' %}{{keyword}}">{{ keyword }}</a>
+        {% endfor %}
     </div>
     <div class="job__desc mt-4" id="comment">
         <hr>
