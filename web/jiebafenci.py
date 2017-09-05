@@ -6,7 +6,7 @@ tfidf = analyse.extract_tags
 
 textrank = analyse.textrank
 
-text ="无轨电车落地济南！8条详细线路出炉 2021年建成"
+text ="为什么女生千万不要出国留学？女生出国留学有哪些问题"
 
 seg_list = jieba.cut(text, cut_all=True)
 print "Full Mode:", "/ ".join(seg_list)  # 全模式
@@ -37,4 +37,4 @@ for keyword in trkeywords:
 
 
 str ="agc,雅思报名"
-print str.split("，")
+print str.split(",")

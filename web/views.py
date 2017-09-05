@@ -136,8 +136,8 @@ def add_art(req):
             form_data = form.cleaned_data
             form_data['author_id'] = req.user.userprofile.id
             #jieba 自动从title提取关键词,
-            tfidf = analyse.extract_tags
-            keywords = tfidf(form_data['title'])
+            textrank = analyse.textrank
+            keywords = textrank(form_data['title'])
             #循环组合前3个关键词
             arr = []
             n=0
