@@ -157,9 +157,9 @@
                                {{ tag }}
                             </h2>
 
-                        {%  if articles.object_list %}
+                        {%  if list %}
 
-                            {% for article in articles.object_list %}
+                            {% for article in list %}
 
                             <div class="position position--genuine featured-sign ">
 
@@ -200,7 +200,7 @@
 
                         {% else %}
 
-                            本栏目暂无内容
+                            暂无相关内容
 
                         {% endif %}
 
@@ -214,14 +214,14 @@
                     </div>
 
                     <div class="mb-3">
-                        {%  if articles.object_list %}
+                        {%  if list %}
 
                         <!--分页start-->
 
                         <div class="pagination pagination-centered">
                           <ul>
-                            {% if articles.has_previous %}
-                            <li><a href="?page={{ articles.previous_page_number }}">前一页</a></li>
+                            {% if list.has_previous %}
+                            <li><a href="?page={{ list.previous_page_number }}">前一页</a></li>
                             {% endif %}
 
                             {% for p in page_range %}
@@ -232,8 +232,8 @@
                               {% endifequal %}
                             {% endfor %}
 
-                            {% if articles.has_next %}
-                            <li><a href="?page={{ articles.next_page_number }}">后一页</a></li>
+                            {% if list.has_next %}
+                            <li><a href="?page={{ list.next_page_number }}">后一页</a></li>
                             {% endif %}
                           </ul>
                         </div>

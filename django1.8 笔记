@@ -228,3 +228,18 @@ print "Default Mode:", "/ ".join(seg_list) #默认模式
 
 seg_list = jieba.cut("他来到了网易杭研大厦")
 print ", ".join(seg_list)
+
+
+python ‘+=’  循环增加字符串运行慢、效率低的问题
+for循环list列表中的元素，并以 ， 链接：
+list =[]
+for keyword in list:
+    str += keyword + ','
+执行时运行特别慢，效率低
+
+改进方法：数组缓存方式
+
+arr = []
+for keyword in list:
+   arr.append(s)
+str = ','.join(arr)

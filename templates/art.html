@@ -2,6 +2,16 @@
 
 {% load custom_tags %}
 
+ {% block page-seo %}
+
+    <title>{{ article.title }}</title>
+    <meta name="keywords" content="{{ article.keywords }}" />
+    <meta name="description" content="{{article.description}}" />
+
+
+
+ {% endblock %}
+
 
 {% block page-banner %}
 <!--
@@ -77,11 +87,12 @@
             {{article.content}}
             {% endautoescape %}
         </div>
-        <label>标签：</label>
-
-        {% for keyword in keywords %}
-          <a href="/tags/{{keyword}}">{{ keyword }}</a>
-        {% endfor %}
+        {% if keywords %}
+            <label>标签：</label>
+            {% for keyword in keywords %}
+              <a href="/tags/{{keyword}}" class="tags">{{ keyword }}</a>
+            {% endfor %}
+        {% endif %}
     </div>
     <div class="job__desc mt-4" id="comment">
         <hr>

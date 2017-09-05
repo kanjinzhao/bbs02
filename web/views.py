@@ -9,10 +9,13 @@ from django.contrib.auth.models import User
 #引入分页
 from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
 
+#引入jieba分词
+from jieba import analyse
+
 import models
 
 
-def my_pagination(request, queryset, display_amount=5, after_range_num = 5,bevor_range_num = 4):
+def my_pagination(request, queryset, display_amount=8, after_range_num = 5,bevor_range_num = 4):
     #按参数分页
     paginator = Paginator(queryset, display_amount)
     try:
@@ -132,6 +135,25 @@ def add_art(req):
             #print ("--form data:",form.cleaned_data)
             form_data = form.cleaned_data
             form_data['author_id'] = req.user.userprofile.id
+            #jieba 自动从title提取关键词,
+            tfidf = analyse.extract_tags
+            keywords = tfidf(form_data['title'])
+            #循环组合前3个关键词
+            arr = []
+            n=0
+            for s in keywords:
+                n=n+1
+                arr.append(s)
+                if n==3:
+                    break
+            strs = ','.join(arr)
+            form_data['keywords'] =strs
+
+            #增加文章描述
+            description = form_data['content']
+            form_data['description'] = description[0:200]
+
+
             new_article_obj = models.Article(**form_data)
             new_article_obj.save()
             return render(req,'addarticle.html')
@@ -184,5 +206,7 @@ def register(req):
 
 #关键字标签
 def tags(req,tag):
-    print tag
-    return render(req,'search.html',{'tag':tag})
+    list = models.Article.objects.filter(keywords__contains=tag)
+    objects, page_range = my_pagination(req, list)
+
+    return render(req,'search.html',{'tag':tag,'list':objects,'page_range':page_range},context_instance=RequestContext(req))
