@@ -11,7 +11,23 @@ class CategroyAdmin(admin.ModelAdmin):
 
 #自定义后台文章列表显示项
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('id','title','categroy','publish_date','hideden')
+    list_display = ('id','title','categroy','author_id','publish_date','hideden')
+
+
+
+#自定义userProfile列表项
+class UserprofileAdmin(admin.ModelAdmin):
+    list_display = ('name','get_user_article')
+
+    def get_user_article(self,user_id):
+        num = models.Article.objects.filter(author_id=user_id)
+        return len(num)
+
+    get_user_article.short_description = u'发贴数'
+
+
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('id','comment','user_id','date')
 
 
 
@@ -19,5 +35,5 @@ admin.site.register(models.Article,ArticleAdmin)
 admin.site.register(models.UserGroup)
 admin.site.register(models.Category,CategroyAdmin)
 admin.site.register(models.ThumUp)
-admin.site.register(models.UserProfile)
-admin.site.register(models.Comment)
+admin.site.register(models.UserProfile,UserprofileAdmin)
+admin.site.register(models.Comment,CommentAdmin)

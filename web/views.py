@@ -12,6 +12,9 @@ from django.core.paginator import Paginator,PageNotAnInteger, EmptyPage
 #引入jieba分词
 from jieba import analyse
 
+#引入自定义文件
+import mvhtml
+
 import models
 
 
@@ -48,13 +51,13 @@ def my_pagination(request, queryset, display_amount=8, after_range_num = 5,bevor
 # Create your views here.
 
 def index(req):
-    articles = models.Article.objects.all()
+    articles = models.Article.objects.all().order_by("-publish_date")
     return render(req,'index.html',{'articles':articles})
 
 
 def lanmu(req,id):
 
-    articles = models.Article.objects.filter(categroy_id=id)
+    articles = models.Article.objects.filter(categroy_id=id).order_by("-publish_date")
     objects, page_range = my_pagination(req, articles)
     #return render(req,'index.html',{'articles':articles,'page_range':page_range})
     return render_to_response('list.html',{'articles':objects,'page_range':page_range},context_instance=RequestContext(req))
@@ -151,7 +154,9 @@ def add_art(req):
 
             #增加文章描述
             description = form_data['content']
-            form_data['description'] = description[0:200]
+
+            form_data['description'] =mvhtml.strip_tags(description[0:200])
+
 
 
             new_article_obj = models.Article(**form_data)
@@ -206,7 +211,7 @@ def register(req):
 
 #关键字标签
 def tags(req,tag):
-    list = models.Article.objects.filter(keywords__contains=tag)
+    list = models.Article.objects.filter(keywords__contains=tag).order_by("-publish_date")
     objects, page_range = my_pagination(req, list)
 
     return render(req,'search.html',{'tag':tag,'list':objects,'page_range':page_range},context_instance=RequestContext(req))

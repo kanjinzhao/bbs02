@@ -23,7 +23,8 @@ class Article(models.Model):
     weight = models.IntegerField(u"优先级",default=1000)
 
     def __unicode__(self):
-        return "<%s,author:%s>" %(self.title,self.author)
+        #return "<%s,author:%s>" %(self.title,self.author)
+        return self.title
 
 
 
