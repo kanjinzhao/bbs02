@@ -3,10 +3,11 @@ import cookielib
 import urllib2
 import bs4
 
-url = "http://www.baidu.com"
+url = "https://www.baidu.com/s?wd=%E7%99%BE%E7%A7%91+%E5%8F%8D%E7%88%AC%E8%99%AB&ie=UTF-8"
 
 print "Frist Method"
 response1 = urllib2.urlopen(url)
+print response1.read()
 print response1.getcode()
 print len(response1.read())
 
