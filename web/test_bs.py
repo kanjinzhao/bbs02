@@ -4,7 +4,7 @@ import urllib2
 from bs4 import BeautifulSoup
 import re
 
-url = "http://www.baike.com/wiki/%E8%96%9B%E4%B9%8B%E8%B0%A6"
+url = "https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
 
 print "Frist Method"
 response1 = urllib2.urlopen(url)
@@ -14,10 +14,14 @@ ftext = open("bake.html","w")
 ftext.write(html_doc)
 
 soup = BeautifulSoup(html_doc,'html.parser',from_encoding='utf-8')
-#http://www.baike.com/wiki/火星人来过
+#/item/%E4%BD%A0%E8%BF%87%E5%BE%97%E5%A5%BD%E5%90%97/16742992
 print '获取所有链接'
-links = soup.find_all('a', href=re.compile(r"http://www.baike.com/wiki/(.*)"))
+links = soup.find_all('a', href=re.compile(r"/item/(.*)"))
+content = soup.find('div',class_="main-content").get_text()
 #links = soup.find_all('a')
+s= '薛之谦'.decode('utf-8')
+if '薛之谦'.decode("utf-8") in content:
+    print content
 #print links
 count = 1
 for link in links:
@@ -28,7 +32,7 @@ for link in links:
         break
 
     count = count+1
-    print new_urls
+    #print new_urls
 print '获取其中一个链接'
 linkone = soup.find('a',href="http://example.com/lacie")
 linkid = soup.find('a',id="link1")

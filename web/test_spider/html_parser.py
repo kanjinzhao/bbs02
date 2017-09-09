@@ -13,12 +13,18 @@ class HtmlParser(object):
 
     def _get_new_urls(self, page_url, soup):
         new_urls = set()
-        #获取所有的链接    格式 http://www.baike.com/wiki/***
-        links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
-        for link in links:
-            new_url = link('href')
-            new_full_url = urlparse.urljoin(page_url,new_url)
-            new_urls.add(new_full_url)
+        #获取搜狗所有的链接    格式 http://www.baike.com/wiki/***
+        #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
+        #获取搜狗特定区域的链接
+        contentcode = soup.find('div',class_="main-content")
+        if '薛之谦'.decode("utf-8") in contentcode.get_text():
+            #/item/**/123
+            #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
+            links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
+            for link in links:
+                new_url = link['href']
+                new_full_url = urlparse.urljoin(page_url,new_url)
+                new_urls.add(new_full_url)
         return new_urls
 
 
@@ -27,12 +33,13 @@ class HtmlParser(object):
 
         res_data['url'] = page_url
         #<h1 style="line-height: 51px;">薛之谦<em class="f24">[中国内地歌手]</em></h1>
-        title_node = soup.find('h1')
+        #< dd   class ="lemmaWgt-lemmaTitle-title" >< h1 > 薛之谦 < / h1 >
+        title_node = soup.find('dd',class_="lemmaWgt-lemmaTitle-title").find('h1')
         res_data['title'] = title_node.get_text()
-
-        #<div class="lemma-summary"
-       # summary_node = soup.find('div',class_="lemma-summary")
-       # res_data['summary'] = summary_node.get_text()
+        #< div class ="summary" name="anchor" id="anchor" > < p > ***< / p > < / div >
+        #<div class="lemma-summary" label-module="lemmaSummary">
+        summary_node = soup.find('div',class_="lemma-summary")
+        res_data['summary'] = summary_node.get_text()
 
         return res_data
 

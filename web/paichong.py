@@ -3,7 +3,7 @@ import cookielib
 import urllib2
 import bs4
 
-url = "https://www.baidu.com/s?wd=%E7%99%BE%E7%A7%91+%E5%8F%8D%E7%88%AC%E8%99%AB&ie=UTF-8"
+url = "https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
 
 print "Frist Method"
 response1 = urllib2.urlopen(url)
@@ -25,4 +25,4 @@ urllib2.install_opener(openner)
 response3 = urllib2.urlopen(url)
 print response3.getcode()
 print ck
-print response3.read()
+#print response3.read()
