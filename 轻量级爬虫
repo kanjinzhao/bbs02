@@ -22,3 +22,26 @@ urllib2网页下载器3种下载方法：
 
 网页解析器：
 正则表达式、html.parser、BeatifulSoup、lxml
+
+
+python 链接数据库
+        #链接数据库（ip，用户名，密码，数据库，编码（解决中文乱码问题）
+        db = MySQLdb.connect("101.200.208.135", "user", "passwd", "bbs",charset="utf8")
+        cursor = db.cursor()
+        insert = ("INSERT INTO web_article(title,categroy_id,head_img,content,author_id,publish_date,hideden,weight)" "VALUES(%s,%s,%s,%s,%s,%s,%s,%s)")
+        title = data['title'].encode('utf-8')
+        author_id = '2'
+        categroy_id = '2'
+        head_img = 'uploads/1.jpg'
+        content = data['summary'].encode('utf-8')
+        ISOTIMEFORMAT ='%Y-%m-%d %X'
+        publish_date =time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
+        hideden = '0'
+        weight = '1000'
+        data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight)
+        cursor.execute(insert, data)
+        db.commit()
+
+时间问题：
+       time.time() 获取当前时间戳
+
