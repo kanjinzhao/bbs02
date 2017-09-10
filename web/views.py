@@ -87,7 +87,10 @@ def article(req,id):
 
         #拆分关键字
         keywords = artilce.keywords
-        keyword = keywords.split(',')
+        if keywords is not None:
+            keyword = keywords.split(',')
+        else:
+            keyword=''
         #print keyword
 
 
@@ -215,3 +218,14 @@ def tags(req,tag):
     objects, page_range = my_pagination(req, list)
 
     return render(req,'search.html',{'tag':tag,'list':objects,'page_range':page_range},context_instance=RequestContext(req))
+
+
+def test(req):
+    title ='ceshibiaoti2'
+    categroy_id = '2'
+    head_img = 'uploads/1.jpg'
+    content = 'neirong'
+
+    b= models.Article(title=title, author_id='2',categroy_id=categroy_id, head_img=head_img, content=content)
+    b.save()
+    return 'ok'
