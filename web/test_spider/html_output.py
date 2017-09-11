@@ -2,8 +2,15 @@
 # @Time    : 17-9-8 上午11:17
 # @Author  : LIUMINGBO
 # @Email   : 540032146@qq.com
+import urllib2
+
 import MySQLdb
 import time
+
+from jieba import analyse
+from jieba.analyse import tfidf
+
+from web import mvhtml
 
 
 class HtmlOutputer(object):
@@ -18,7 +25,7 @@ class HtmlOutputer(object):
 
 
     def output_html(self):
-
+        #输出html文件
         fout = open('out6.html','w')
 
         fout.write("<html>")
@@ -30,8 +37,10 @@ class HtmlOutputer(object):
 
             fout.write("<tr>")
             fout.write("<td>%s</td>" % data['url'])
-            fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
-            fout.write("<td>%s</td>" % data['summary'].encode('utf-8'))
+            #fout.write("<td>%s</td>" % data['head_img'])
+            #fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
+            #fout.write("<td>%s</td>" % data['summary'].encode('utf-8'))
+
             fout.write("</tr>")
 
         fout.write("</table>")
@@ -44,18 +53,46 @@ class HtmlOutputer(object):
         #存入数据库
         db = MySQLdb.connect("101.200.208.135", "python", "admin!@#", "bbs",charset="utf8")
         cursor = db.cursor()
-        insert = ("INSERT INTO web_article(title,categroy_id,head_img,content,author_id,publish_date,hideden,weight)" "VALUES(%s,%s,%s,%s,%s,%s,%s,%s)")
+        insert = ("INSERT INTO web_article(title,categroy_id,head_img,content,author_id,publish_date,hideden,weight,keywords,description)" "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)")
+        x = 0
         for data in self.datas:
             title = data['title'].encode('utf-8')
             author_id = '2'
             categroy_id = '2'
-            head_img = 'uploads/1.jpg'
+            #下载图片
+            #urllib2.urlretrieve(data['head_img'],'/home/lmb/bbs02/static/uploads\\d.jpg'%x)
+            url = data['head_img']
+            f = open('/home/lmb/bbs02/static/uploads/'+str(x)+'.jpg','w')
+            req = urllib2.urlopen(url)
+            buf = req.read()
+            f.write(buf)
+
+            head_img = 'static/uploads/'+str(x)+'.jpg'
+            x=x+1
+
+            #关键词
+            #textrank = analyse.textrank
+            keywords = tfidf(data['summary'])
+            #循环组合前3个关键词
+            arr = []
+            n=0
+            for s in keywords:
+                n=n+1
+                arr.append(s)
+                if n==3:
+                    break
+            strs = ','.join(arr)
+            keywords  =strs
+
             content = data['summary'].encode('utf-8')
+
+            description = mvhtml.strip_tags(content[0:200])
+
             ISOTIMEFORMAT ='%Y-%m-%d %X'
-            publish_date =time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
+            publish_date = time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
             hideden = '0'
             weight = '1000'
-            data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight)
+            data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight,keywords,description)
             cursor.execute(insert, data)
         db.commit()
 

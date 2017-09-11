@@ -157,7 +157,7 @@
                                 All Vue.js jobs
                             </h2>
 
-                        {%  if articles.object_list %}
+                        {%  if articles %}
 
                             {% for article in articles.object_list %}
 
@@ -168,7 +168,7 @@
 
                                     <div class="position__company text-center">
 
-                                        <IMG src="/{{ article.head_img }}">
+                                        <IMG src="{{ article.head_img }}">
 
                                     </div>
 

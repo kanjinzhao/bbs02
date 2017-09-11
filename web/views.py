@@ -18,7 +18,7 @@ import mvhtml
 import models
 
 
-def my_pagination(request, queryset, display_amount=8, after_range_num = 5,bevor_range_num = 4):
+def my_pagination(request, queryset, display_amount=20, after_range_num = 5,bevor_range_num = 4):
     #按参数分页
     paginator = Paginator(queryset, display_amount)
     try:
@@ -52,13 +52,22 @@ def my_pagination(request, queryset, display_amount=8, after_range_num = 5,bevor
 
 def index(req):
     articles = models.Article.objects.all().order_by("-publish_date")
+    for article in articles:
+        strs = str(article.head_img)
+        if 'static/uploads' in strs:
+            article.head_img = '/'+ str(article.head_img)
     return render(req,'index.html',{'articles':articles})
 
 
 def lanmu(req,id):
 
     articles = models.Article.objects.filter(categroy_id=id).order_by("-publish_date")
+    for article in articles:
+        strs = str(article.head_img)
+        if 'static/uploads' in strs:
+            article.head_img = '/'+ str(article.head_img)
     objects, page_range = my_pagination(req, articles)
+
     #return render(req,'index.html',{'articles':articles,'page_range':page_range})
     return render_to_response('list.html',{'articles':objects,'page_range':page_range},context_instance=RequestContext(req))
 
@@ -161,7 +170,6 @@ def add_art(req):
             form_data['description'] =mvhtml.strip_tags(description[0:200])
 
 
-
             new_article_obj = models.Article(**form_data)
             new_article_obj.save()
             return render(req,'addarticle.html')
@@ -215,6 +223,10 @@ def register(req):
 #关键字标签
 def tags(req,tag):
     list = models.Article.objects.filter(keywords__contains=tag).order_by("-publish_date")
+    for article in list:
+        strs = str(article.head_img)
+        if 'static/uploads' in strs:
+            article.head_img = '/'+ str(article.head_img)
     objects, page_range = my_pagination(req, list)
 
     return render(req,'search.html',{'tag':tag,'list':objects,'page_range':page_range},context_instance=RequestContext(req))

@@ -17,7 +17,7 @@ class HtmlParser(object):
         #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
         #获取搜狗特定区域的链接
         contentcode = soup.find('div',class_="main-content")
-        if '薛之谦'.decode("utf-8") in contentcode.get_text():
+        if '滨州'.decode("utf-8") in contentcode.get_text():
             #/item/**/123
             #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
             links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
@@ -40,6 +40,9 @@ class HtmlParser(object):
         #<div class="lemma-summary" label-module="lemmaSummary">
         summary_node = soup.find('div',class_="lemma-summary")
         res_data['summary'] = summary_node.get_text()
+        #获取图片链接
+        img_node = soup.find('div',class_="summary-pic").find('img')
+        res_data['head_img'] = img_node['src']
 
         return res_data
 

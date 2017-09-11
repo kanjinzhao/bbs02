@@ -37,7 +37,7 @@ class SpiderMain(object):
                 #收集数据
                 self.outputer.collect_data(new_data)
                 #爬取1000个页面
-                if count==10:
+                if count==100:
                     break
 
                 count=count+1
@@ -50,6 +50,7 @@ class SpiderMain(object):
 
 if __name__=="__main__":
     #root_url="http://www.baike.com/wiki/%E8%96%9B%E4%B9%8B%E8%B0%A6"
-    root_url="https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
+    #root_url="https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
+    root_url = "https://baike.baidu.com/item/%E6%BB%A8%E5%B7%9E/371316"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
