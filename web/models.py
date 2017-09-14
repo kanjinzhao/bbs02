@@ -94,3 +94,10 @@ class UserGroup(models.Model):
 
     def __unicode__(self):
         return self.name
+
+class Tags(models.Model):
+    '''
+    标签表
+    '''
+    tagname = models.CharField(max_length=20)
+    num = models.CharField(max_length=100)

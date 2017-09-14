@@ -157,12 +157,22 @@ def add_art(req):
             arr = []
             n=0
             for s in keywords:
-                n=n+1
                 arr.append(s)
+                strs = ','.join(arr)
+                form_data['keywords'] = strs
+
+                # 循环保存到tags表
+                #查询数据库tag是否存在
+                try:
+                    have_tag=models.Tags.objects.get(tagname=s)
+                    num = int(have_tag.num) + 1
+                    models.Tags.objects.filter(tagname=s).update(num=num)
+                except:
+                    b = models.Tags(tagname=s, num=1)
+                    b.save()
+                n=n+1
                 if n==3:
                     break
-            strs = ','.join(arr)
-            form_data['keywords'] =strs
 
             #增加文章描述
             description = form_data['content']

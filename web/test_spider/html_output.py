@@ -54,6 +54,10 @@ class HtmlOutputer(object):
         db = MySQLdb.connect("101.200.208.135", "python", "admin!@#", "bbs",charset="utf8")
         cursor = db.cursor()
         insert = ("INSERT INTO web_article(title,categroy_id,head_img,content,author_id,publish_date,hideden,weight,keywords,description)" "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)")
+
+
+
+
         x = 0
         for data in self.datas:
             title = data['title'].encode('utf-8')
@@ -77,6 +81,23 @@ class HtmlOutputer(object):
             arr = []
             n=0
             for s in keywords:
+                # 循环保存到tags表
+                try:
+                    # 查询数据库tag是否存在
+                    selecttag= "SELECT num from web_tags WHERE tagname =' %s'" %(s)
+                    cursor.execute(selecttag)
+                    results = cursor.fetchall()
+                    for row in results:
+                        num = row[0]
+                        num = num + 1
+                        updatetag = "UPDATE web_tags SET num = '%s'  WHERE tagname = s" % (num)
+                        cursor.execute(updatetag)
+                except:
+                    #tag不存在直接插入keyword
+                    inserttag =("INSERT INTO web_tags(tagname,num)" "VALUES(%s,%s)")
+                    datatag = (s,1)
+                    cursor.execute(inserttag, datatag)
+
                 n=n+1
                 arr.append(s)
                 if n==3:
@@ -93,7 +114,11 @@ class HtmlOutputer(object):
             hideden = '0'
             weight = '1000'
             data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight,keywords,description)
-            cursor.execute(insert, data)
-        db.commit()
+            try:
+                cursor.execute(insert, data)
+                db.commit()
+            except:
+                return
+        db.close()
 
 
