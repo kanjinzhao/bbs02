@@ -51,6 +51,6 @@ class SpiderMain(object):
 if __name__=="__main__":
     #root_url="http://www.baike.com/wiki/%E8%96%9B%E4%B9%8B%E8%B0%A6"
     #root_url="https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
-    root_url = "https://baike.baidu.com/item/%E6%B3%B0%E5%B1%B1/5447"
+    root_url = "https://baike.baidu.com/item/%E9%9D%92%E5%B2%9B/60244"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)

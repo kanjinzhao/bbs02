@@ -17,7 +17,7 @@ class HtmlParser(object):
         #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
         #获取搜狗特定区域的链接
         contentcode = soup.find('div',class_="main-content")
-        if '泰山'.decode("utf-8") in contentcode.get_text():
+        if '青岛'.decode("utf-8") in contentcode.get_text():
             #/item/**/123
             #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
             links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
