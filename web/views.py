@@ -16,6 +16,7 @@ from jieba import analyse
 import mvhtml
 
 import models
+from django.db.models import Q
 
 
 def my_pagination(request, queryset, display_amount=20, after_range_num = 5,bevor_range_num = 4):
@@ -47,6 +48,15 @@ def my_pagination(request, queryset, display_amount=20, after_range_num = 5,bevo
 
 
 
+#提取关键词
+def show_tag(id):
+    tags = models.Tags.objects.all().order_by("-num")[0:id]
+    return tags
+
+#推荐相关文章
+def like_art(keywords0,keywords1,keywords2,num):
+    like_arts = models.Article.objects.filter(Q(title__contains=keywords0)|Q(title__contains=keywords1)|Q(title__contains=keywords2))[0:num]
+    return like_arts
 
 # Create your views here.
 
@@ -88,8 +98,6 @@ def article(req,id):
         else:
             errs='请填写评论内容'
 
-
-
     try:
         artilce = models.Article.objects.get(id=id)
         author = models.UserProfile.objects.get(id=artilce.author_id)
@@ -112,7 +120,15 @@ def article(req,id):
 
         return render(req,'404.html',{'msg':u'文章不存在！'})
 
-    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keywords':keyword})
+    #获取15个标签词
+    tags = show_tag(15)
+
+    #查找5篇相关文章
+    print keyword
+    like_arts =like_art(keyword[0],keyword[1],keyword[2],5)
+
+
+    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keywords':keyword,'tags':tags,'like_arts':like_arts})
 
 
 
@@ -251,3 +267,14 @@ def test(req):
     b= models.Article(title=title, author_id='2',categroy_id=categroy_id, head_img=head_img, content=content)
     b.save()
     return 'ok'
+
+#全站搜索
+def search(req):
+    list = models.Article.objects.filter(title__contains=keyword).order_by("-publish_date")
+    for article in list:
+        strs = str(article.head_img)
+        if 'static/uploads' in strs:
+            article.head_img = '/'+ str(article.head_img)
+    objects, page_range = my_pagination(req, list)
+
+    return render(req,'search.html',{'tag':keyword,'list':objects,'page_range':page_range},context_instance=RequestContext(req))

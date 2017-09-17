@@ -99,5 +99,9 @@ class Tags(models.Model):
     '''
     标签表
     '''
-    tagname = models.CharField(max_length=20)
-    num = models.CharField(max_length=100)
+    tagname = models.CharField(u"关键字",max_length=20)
+    num = models.CharField(u"频率",max_length=100)
+    update_time = models.DateTimeField(u"更新时间",auto_now=True)
+
+    def __unicode__(self):
+        return self.tagname

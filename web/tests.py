@@ -54,5 +54,5 @@ def test():
 
 
 #test()
-print time.time()
-print int(time.time())
+#print time.time()
+#print int(time.time())

@@ -29,6 +29,8 @@ class UserprofileAdmin(admin.ModelAdmin):
 class CommentAdmin(admin.ModelAdmin):
     list_display = ('id','comment','user_id','date')
 
+class TagsAadmin(admin.ModelAdmin):
+    list_display = ('id','tagname','num','update_time')
 
 
 admin.site.register(models.Article,ArticleAdmin)
@@ -37,3 +39,5 @@ admin.site.register(models.Category,CategroyAdmin)
 admin.site.register(models.ThumUp)
 admin.site.register(models.UserProfile,UserprofileAdmin)
 admin.site.register(models.Comment,CommentAdmin)
+admin.site.register(models.Tags,TagsAadmin)
+

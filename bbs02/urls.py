@@ -16,7 +16,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 
 from web import views
-from web import tests
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -28,6 +27,7 @@ urlpatterns = [
     url(r'^user/addart/',views.add_art,name='addart'),
     url(r'^user/register/',views.register,name='register'),
     url(r'^tags/(.*)',views.tags,name='tags'),
-    url(r'^test/',views.test),
+    #url(r'^test/',views.test),
+    url(r'^search/$',views.search,name='search'),
 
 ]

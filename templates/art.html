@@ -2,15 +2,15 @@
 
 {% load custom_tags %}
 
- {% block page-seo %}
+{% block page-seo %}
 
-    <title>{{ article.title }}</title>
-    <meta name="keywords" content="{{ article.keywords }}" />
-    <meta name="description" content="{{article.description}}" />
+<title>{{ article.title }}</title>
+<meta name="keywords" content="{{ article.keywords }}" />
+<meta name="description" content="{{article.description}}" />
 
 
 
- {% endblock %}
+{% endblock %}
 
 
 {% block page-banner %}
@@ -67,8 +67,8 @@
                 </div>
 
                 <div class="job-info__block job__posted-at">
-                <div>Posted</div>
-                <span>{{article.publish_date}}</span>
+                    <div>Posted</div>
+                    <span>{{article.publish_date}}</span>
                 </div>
             </div>
         </div>
@@ -84,35 +84,102 @@
 
         <div>
             {% autoescape off %}
-                 {{article.content}}
+            {{article.content}}
             {% endautoescape %}
         </div>
         {% if keywords %}
-            <label>标签：</label>
-            {% for keyword in keywords %}
-              <a href="/tags/{{keyword}}" class="tags">{{ keyword }}</a>
-            {% endfor %}
+        <label>标签：</label>
+        {% for keyword in keywords %}
+        <a href="/tags/{{keyword}}" class="tags">{{ keyword }}</a>
+        {% endfor %}
         {% endif %}
     </div>
     <div class="job__desc mt-4" id="comment">
         <hr>
+
+        <div class="mt-5">
+            <h5 class="title">相关推荐</h5>
+
+            <div id="job-search" class="positions">
+
+                <div class="positions__search mb-3" style="">
+                    <form action="{% url 'search' %}"  class="d-flex justify-content-between flex-column flex-md-row align-items-end bg-gray p-3 rounded">
+                        {% csrf_token %}
+                        <div class="form-group w-60 mb-1 mb-md-0 mr-md-3">
+                           <!-- <label class="form-control-label">搜一搜</label> -->
+                            <input name="keyword" placeholder="输入您要搜索的内容" class="form-control form-control-sm" type="text"></div>
+
+                        <div class="form-button">
+                            <button type="submit" class="btn btn-sm btn-danger">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="positions__list">
+                    <div class="positions__empty" style="display: none;">
+                        <p class="lead mt-3">Whooops! Your search filters did not match any records.</p>
+                        <button class="btn btn-success btn-sm">Reset your search</button>
+                    </div>
+          {% for art in like_arts %}
+
+                    <a  href="{% url 'article' art.id %}" class="position">
+                        <div class="d-flex align-items-center">
+                            <div class="position__company text-center">
+                                <div class="position__company__acronym">RI</div>
+                            </div>
+                            <div class="position__info w-100">
+                                <div class="d-flex justify-content-between align-items-center" style="position: relative;">
+
+
+                                    <div class="position__title">
+                                        <span class="font-weight-bold">{{ art.title }}</span>
+                                       <!-- <div class="position__location">
+                                            <span class="small"> <strong></strong></span>,
+                                            <span class="small text-capitalize"></span>
+                                        </div> -->
+
+                                    </div>
+                                    <div class="hidden-xs-down position__apply font-weight-bold" style="z-index: 1000;">
+                                        <div class="position__published_at font-weight-normal">{{art.publish_date}}</div>
+                                        <span class="btn btn-danger btn-sm">View now!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                   {% endfor %}
+
+                </div> <!---->
+                <div class="mt-3">
+                    <a href="https://www.ziprecruiter.co.uk/jobs" id="jobs_widget_link">
+                        <span id="zr_logo_container">Jobs provided by
+                                <img id="zr_logo" src="https://www.ziprecruiter.co.uk/img/logos/logo-sm-black-304px.png" alt="ZipRecruiter" width="90"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="sk-three-bounce" style="">
+            <div class="sk-child sk-bounce1"></div>
+            <div class="sk-child sk-bounce2"></div>
+            <div class="sk-child sk-bounce3"></div>
+        </div>
+        <hr>
         <div class="red">{{errs}}</div>
         <div>
             <form action="{% url 'article' article.id %}" method="post" name="">
-                 {% csrf_token %}
+                {% csrf_token %}
                 <input type="hidden" name="fatherid" id="fatherid" value="">
-                   {% if request.user.is_authenticated %}
-                 <textarea    placeholder="添加回复" name="comment" class="form-control form-control-lg" ></textarea>
+                {% if request.user.is_authenticated %}
+                <textarea    placeholder="添加回复" name="comment" class="form-control form-control-lg" ></textarea>
 
-                 <input class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
-                              {% else %}
+                <input class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
+                {% else %}
 
-                 <textarea    disabled="disabled"     placeholder="登录后添加回复" name="comment" class="form-control form-control-lg" ></textarea>
+                <textarea    disabled="disabled"     placeholder="登录后添加回复" name="comment" class="form-control form-control-lg" ></textarea>
 
-                 <input disabled="disabled"  class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
+                <input disabled="disabled"  class="btn btn-success" style="margin-top:10px;" type="submit" value="发表回复">
 
 
-                              {% endif %}
+                {% endif %}
 
 
 
@@ -125,8 +192,8 @@
 
 
     <div class="job__desc mt-4">
-       <label>查看评论（已有{{ sum_com }}人吐槽）</label>
-            {% build_comment_tree article.comment_set.select_related %}
+        <label>查看评论（已有{{ sum_com }}人吐槽）</label>
+        {% build_comment_tree article.comment_set.select_related %}
     </div>
 
     <script LANGUAGE="JavaScript">
@@ -152,9 +219,13 @@
     <a  href="mailto:join@regily.com"
         class="btn btn-block btn-danger">Apply now!</a>
     <hr>
-    <h5>Are you interested in this position?</h5>
+    <h5>热门新闻</h5>
     <div>Make sure you have read the <a href="#how-to-apply" class="font-italic">How to Apply</a>
         section.
+        {% for tag in tags %}
+
+        <a href="/tags/{{ tag.tagname }}" class="tags">{{ tag.tagname }}</a>
+        {% endfor %}
     </div>
 </div>
 
