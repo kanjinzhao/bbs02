@@ -3,7 +3,7 @@
 from django.shortcuts import render,HttpResponseRedirect,render_to_response,RequestContext
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib.auth import logout,login,authenticate
-from forms import ArticleForm,CommentForm,RegistForm
+from forms import ArticleForm,CommentForm,RegistForm,SearchForm
 #注册时导入User表
 from django.contrib.auth.models import User
 #引入分页
@@ -17,6 +17,7 @@ import mvhtml
 
 import models
 from django.db.models import Q
+
 
 
 def my_pagination(request, queryset, display_amount=20, after_range_num = 5,bevor_range_num = 4):
@@ -58,6 +59,16 @@ def like_art(keywords0,keywords1,keywords2,num):
     like_arts = models.Article.objects.filter(Q(title__contains=keywords0)|Q(title__contains=keywords1)|Q(title__contains=keywords2))[0:num]
     return like_arts
 
+#获取最新文章列表
+def newart_list(num):
+    last_list = models.Article.objects.all().order_by("-publish_date")[0:num]
+    return last_list
+
+
+
+
+
+
 # Create your views here.
 
 def index(req):
@@ -76,10 +87,23 @@ def lanmu(req,id):
         strs = str(article.head_img)
         if 'static/uploads' in strs:
             article.head_img = '/'+ str(article.head_img)
+        #拆分关键字
+        keywords = article.keywords
+        if keywords is not None:
+            article.keywords = keywords.split(',')
+
+
     objects, page_range = my_pagination(req, articles)
 
+
+    #获取15个标签词
+    tags = show_tag(15)
+
+    #获取最新文章10条
+    last_list = newart_list(10)
+
     #return render(req,'index.html',{'articles':articles,'page_range':page_range})
-    return render_to_response('list.html',{'articles':objects,'page_range':page_range},context_instance=RequestContext(req))
+    return render_to_response('list.html',{'articles':objects,'page_range':page_range,'tags':tags,'last_list':last_list},context_instance=RequestContext(req))
 
 def article(req,id):
 
@@ -124,11 +148,13 @@ def article(req,id):
     tags = show_tag(15)
 
     #查找5篇相关文章
-    print keyword
     like_arts =like_art(keyword[0],keyword[1],keyword[2],5)
 
+    #获取最新文章10条
+    last_list = newart_list(10)
 
-    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keywords':keyword,'tags':tags,'like_arts':like_arts})
+
+    return render(req,'art.html',{'article':artilce,'author':author,'errs':errs,'sum_com':sum_com,'keywords':keyword,'tags':tags,'like_arts':like_arts,'last_list':last_list})
 
 
 
@@ -258,23 +284,25 @@ def tags(req,tag):
     return render(req,'search.html',{'tag':tag,'list':objects,'page_range':page_range},context_instance=RequestContext(req))
 
 
-def test(req):
-    title ='ceshibiaoti2'
-    categroy_id = '2'
-    head_img = 'uploads/1.jpg'
-    content = 'neirong'
-
-    b= models.Article(title=title, author_id='2',categroy_id=categroy_id, head_img=head_img, content=content)
-    b.save()
-    return 'ok'
 
 #全站搜索
 def search(req):
-    list = models.Article.objects.filter(title__contains=keyword).order_by("-publish_date")
-    for article in list:
-        strs = str(article.head_img)
-        if 'static/uploads' in strs:
-            article.head_img = '/'+ str(article.head_img)
-    objects, page_range = my_pagination(req, list)
+    if req.method =="POST":
+        form = SearchForm(req.POST)
+        if form.is_valid():
+            form_data= form.cleaned_data
+            keywords = form_data['keyword']
 
-    return render(req,'search.html',{'tag':keyword,'list':objects,'page_range':page_range},context_instance=RequestContext(req))
+            list = models.Article.objects.filter(title__contains=keywords).order_by("-publish_date")
+            for article in list:
+                strs = str(article.head_img)
+                if 'static/uploads' in strs:
+                    article.head_img = '/'+ str(article.head_img)
+            objects, page_range = my_pagination(req, list)
+        else:
+            return HttpResponseRedirect('/')
+
+    #列表页推荐标签
+    tag = show_tag(20)
+
+    return render(req,'search.html',{'tag':keywords,'list':objects,'page_range':page_range,'tags':tag},context_instance=RequestContext(req))

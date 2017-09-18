@@ -56,3 +56,13 @@ def test():
 #test()
 #print time.time()
 #print int(time.time())
+def bianliang():
+    x = 1
+    if x ==1:
+        x =3
+        if x==2:
+            y=2
+    print x,y
+
+
+bianliang()

@@ -37,7 +37,7 @@ class SpiderMain(object):
                 #收集数据
                 self.outputer.collect_data(new_data)
                 #爬取1000个页面
-                if count==10:
+                if count==500:
                     break
 
                 count=count+1

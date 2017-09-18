@@ -66,12 +66,13 @@ class HtmlOutputer(object):
             #下载图片
             #urllib2.urlretrieve(data['head_img'],'/home/lmb/bbs02/static/uploads\\d.jpg'%x)
             url = data['head_img']
-            f = open('/home/lmb/bbs02/static/uploads/'+str(x)+'.jpg','w')
+            tim = int(time.time())
+
+            f = open('/home/lmb/bbs02/static/uploads/'+str(x)+ str(tim)+'.jpg','w')
             req = urllib2.urlopen(url)
             buf = req.read()
             f.write(buf)
 
-            tim = int(time.time())
 
             head_img = 'static/uploads/'+str(x) + str(tim) +'.jpg'
             x=x+1

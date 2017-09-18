@@ -181,15 +181,21 @@
 
 
                                                 <div class="position__location text-muted small">
-                                                    at <a href="https://vuejobs.com/company/qwire" class="font-weight-bold">Qwire</a> –
-                                                    <span class="text-capitalize">Remote</span>
+                                                {% if article.keywords %}
+                                                    {% for keyword in article.keywords %}
+
+                                                    <a href="/tags/{{ keyword }}" class="">{{ keyword }}</a>
+                                                    {% endfor %}
+
+                                                {% endif %}
+
                                                 </div>
                                             </div>
 
 
                                             <div class="hidden-xs-down position__type small text-right text-muted" style="z-index: 1000">
-                                                <a href="https://vuejobs.com/full-time-vuejs-jobs" class="font-weight-bold">Full-time</a><br>
-                                                Student
+                                                {{article.publish_date}}<br>
+                                                <!--100浏览-->
                                             </div>
                                         </div>
                                     </div>
@@ -264,11 +270,6 @@
                             </div></div>
 
 
-
-
-
-
-
                         <div class="sidebar__row">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/img/newsletter/email-2.svg" class="mr-3" style="max-width: 40px; max-height: 35px" alt="">
@@ -298,29 +299,33 @@
                         <div class="sidebar__row">
                             <div class="d-flex align-items-center mb-3">
                                 <img src="/img/startup.svg" class="mr-2" style="max-width: 40px; max-height: 50px" alt="">
-                                <h6>Be the first to know about our new listings!</h6>
+                                <h5>最新文章</h5>
                             </div>
 
                             <div class="share share--list">
                                 <div class="social-links d-flex flex-column">
-                                    <a href="/feed" class="social-link social-linkedin"><i class="fa fa-fw fa-rss"></i>
-                                        Subscribe to our RSS
-                                    </a>
-                                    <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fvuejobs.dev%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=vuejsjob&tw_p=followbutton"
-                                       target="_blank" class="social-link social-twitter"><i class="fa fa-fw fa-twitter"></i>
-                                        Follow @VuejsJob
-                                    </a>
-                                    <a href="http://facebook.com/vuejsjobs" target="_blank" class="social-link social-facebook"><i
-                                            class="fa fa-fw fa-facebook"></i> Like us on Facebook
-                                    </a>
+
+                                    {% for art in last_list %}
+
+                                        <a href="{% url 'article' art.id %}" class="social-link social-whatsapp" target="_blank">
+                                            <i class="fa fa-fw fa-facebook"></i>{{art.title}}
+                                        </a>
+
+                                    {% endfor %}
+
+
                                 </div>
                             </div>
                         </div>
 
                         <div class="sidebar__row bg-gray rounded featured-sign">
-                            <div class="featured-sign__message featured-sign__message--dsm bg-inverse">Featured resource!</div>
+                            <div class="featured-sign__message featured-sign__message--dsm bg-inverse">热门标签</div>
                             <div class="the-majesty-of-vuejs-2 pt-3">
-                                <p>Do you want to learn Vue.js 2 from scratch? Check out <a href="https://leanpub.com/vuejs2" target="_blank">The Majesty of Vue.js 2</a>.</p>
+                                <p>
+                                           {% for tag in tags %}
+                                               <a href="/tags/{{ tag.tagname }}">{{ tag.tagname }}</a>
+                                           {% endfor %}
+                                </p>
 
                                 <p class="text-center">
                                     <a href="https://leanpub.com/vuejs2" target="_blank">
@@ -328,7 +333,9 @@
                                     </a>
                                 </p>
                                 <div class=" text-center">From the guys of <a target="_blank" href="https://vuejsfeed.com">Vue.js Feed</a>.</div>
-                            </div></div>            </div>
+                            </div>
+                        </div>
+                </div>
 
 
                 {% endblock %}

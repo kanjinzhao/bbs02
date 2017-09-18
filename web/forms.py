@@ -19,3 +19,6 @@ class RegistForm(forms.Form):
     email = forms.EmailField()
     password = forms.CharField()
     repassword = forms.CharField()
+
+class SearchForm(forms.Form):
+    keyword = forms.CharField(min_length=1)

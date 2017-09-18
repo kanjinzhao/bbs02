@@ -103,14 +103,16 @@
             <div id="job-search" class="positions">
 
                 <div class="positions__search mb-3" style="">
-                    <form action="{% url 'search' %}"  class="d-flex justify-content-between flex-column flex-md-row align-items-end bg-gray p-3 rounded">
+                    <form action="{% url 'search' %}"  method="post" class="d-flex justify-content-between flex-column flex-md-row align-items-end bg-gray p-3 rounded">
                         {% csrf_token %}
                         <div class="form-group w-60 mb-1 mb-md-0 mr-md-3">
                            <!-- <label class="form-control-label">搜一搜</label> -->
-                            <input name="keyword" placeholder="输入您要搜索的内容" class="form-control form-control-sm" type="text"></div>
+                            <input name="keyword" placeholder="输入您要搜索的内容" class="form-control form-control-sm" type="text">
+                            <label>{{ err_msg }}</label>
+                        </div>
 
                         <div class="form-button">
-                            <button type="submit" class="btn btn-sm btn-danger">Search</button>
+                            <input type="submit" class="btn btn-sm btn-danger" value="Search">
                         </div>
                     </form>
                 </div>
@@ -234,29 +236,19 @@
         <h3>Spread the word!</h3>
 
         <div class="social-links d-flex flex-column">
-            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer"
-               class="social-link social-facebook">
-                <i class="fa fa-fw fa-facebook"></i> Share on Facebook
-            </a>
-            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;text=Passionate%20frontend%20developer"
-               class="social-link social-twitter">
-                <i class="fa fa-fw fa-twitter"></i> Tweet this job
-            </a>
-            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="http://www.linkedin.com/shareArticle?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer&amp;title=Passionate%20frontend%20developer&amp;mini=true"
-               class="social-link social-linkedin">
-                <i class="fa fa-fw fa-linkedin"></i> Post on LinkedIn
-            </a>
-            <a href="whatsapp://send?text=Passionate%20frontend%20developer%20https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
-               class="social-link social-whatsapp">
-                <i class="fa fa-fw fa-whatsapp"></i> Message on WhatsApp
-            </a>
-            <a onClick="window.open(this.href,&#039;targetWindow&#039;,&#039;toolbars=0,location=0,status=0,menubar=0,scrollbars=1,resizable=1,width=640,height=320,left=200,top=200&#039;);return false;" href="https://plus.google.com/share?url=https%3A%2F%2Fvuejobs.com%2Fjobs%2F172-passionate-vue-frontend-developer"
-               class="social-link social-google">
-                <i class="fa fa-fw fa-google-plus"></i> Share on Google
-            </a>
+
+                {% for art in last_list %}
+
+                 <a href="{% url 'article' art.id %}" class="social-link social-google" target="_blank">
+                      <i class="fa fa-fw fa-facebook"></i>{{art.title}}
+                 </a>
+
+                {% endfor %}
+
         </div>
 
-    </div>                </div>
+    </div>
+</div>
 
 
 

@@ -323,17 +323,27 @@
                         </div>
 
                         <div class="sidebar__row bg-gray rounded featured-sign">
-                            <div class="featured-sign__message featured-sign__message--dsm bg-inverse">Featured resource!</div>
+                            <div class="featured-sign__message featured-sign__message--dsm bg-inverse">热门点击</div>
                             <div class="the-majesty-of-vuejs-2 pt-3">
-                                <p>Do you want to learn Vue.js 2 from scratch? Check out <a href="https://leanpub.com/vuejs2" target="_blank">The Majesty of Vue.js 2</a>.</p>
+                                <p>
+                                    {% for tag in tags %}
+                                            <a href="/tags/{{ tag.tagname }}" class="tags">{{ tag.tagname }}</a>
+
+                                    {% endfor %}
+                                </p>
 
                                 <p class="text-center">
                                     <a href="https://leanpub.com/vuejs2" target="_blank">
                                         <img class="rounded" width="100px" src="/img/misc/vuejs2-book.jpg" alt="The Majesty of Vue.js 2 book cover">
                                     </a>
                                 </p>
-                                <div class=" text-center">From the guys of <a target="_blank" href="https://vuejsfeed.com">Vue.js Feed</a>.</div>
-                            </div></div>            </div>
+                                <div class=" text-center">
+                                    From the guys of
+                                    <a target="_blank" href="https://vuejsfeed.com">Vue.js Feed</a>.
+                                </div>
+                            </div>
+                        </div>
+                </div>
 
 
                 {% endblock %}
