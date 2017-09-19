@@ -61,73 +61,88 @@ class HtmlOutputer(object):
         x = 0
         for data in self.datas:
             title = data['title'].encode('utf-8')
-            author_id = '2'
-            categroy_id = '2'
-            #下载图片
-            #urllib2.urlretrieve(data['head_img'],'/home/lmb/bbs02/static/uploads\\d.jpg'%x)
-            url = data['head_img']
-            tim = int(time.time())
 
-            f = open('/home/lmb/bbs02/static/uploads/'+str(x)+ str(tim)+'.jpg','w')
-            req = urllib2.urlopen(url)
-            buf = req.read()
-            f.write(buf)
-
-
-            head_img = 'static/uploads/'+str(x) + str(tim) +'.jpg'
-            x=x+1
-
-            #关键词
-            #textrank = analyse.textrank
-            keywords = tfidf(data['summary'])
-            #循环组合前3个关键词
-            arr = []
-            n=0
-            for s in keywords:
-                selecttag = "SELECT num from web_tags WHERE tagname ='%s'" % (s)
-                print selecttag
-                cursor.execute(selecttag)
-                results = cursor.fetchall()
-                # 循环保存到tags表
-                try:
-                    if len(results) ==0:
-                        # tag不存在直接插入keyword
-                        inserttag = ("INSERT INTO web_tags(tagname,num)" "VALUES(%s,%s)")
-                        print inserttag
-                        datatag = (s, 1)
-                        cursor.execute(inserttag, datatag)
-                        db.commit()
-                    else:
-                        for row in results:
-                            num = int(row[0])
-                            num = num + 1
-                            updatetag = "UPDATE web_tags SET num = '%s'  WHERE tagname ="%(num) + "\'"+ s +"\'"
-                            cursor.execute(updatetag)
-                            db.commit()
-                except:
-                    return
-
-                n=n+1
-                arr.append(s)
-                if n==3:
-                    break
-            strs = ','.join(arr)
-            keywords =strs
-
-            content = data['summary'].encode('utf-8')
-
-            description = mvhtml.strip_tags(content[0:200])
-
-            ISOTIMEFORMAT ='%Y-%m-%d %X'
-            publish_date = time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
-            hideden = '0'
-            weight = '1000'
-            data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight,keywords,description)
+            selecttitle= "SELECT title from web_article WHERE title ='%s'" % (title)
+            print selecttitle
+            cursor.execute(selecttitle)
+            resultstitle = cursor.fetchall()
             try:
-                cursor.execute(insert, data)
+                if len(resultstitle) ==0:
+
+                    author_id = '2'
+                    categroy_id = '2'
+                    #下载图片
+                    #urllib2.urlretrieve(data['head_img'],'/home/lmb/bbs02/static/uploads\\d.jpg'%x)
+                    url = data['head_img']
+                    tim = int(time.time())
+
+                    f = open('/home/lmb/bbs02/static/uploads/'+str(x)+ str(tim)+'.jpg','w')
+                    req = urllib2.urlopen(url)
+                    buf = req.read()
+                    f.write(buf)
+
+
+                    head_img = 'static/uploads/'+str(x) + str(tim) +'.jpg'
+                    x=x+1
+
+                    #关键词
+                    #textrank = analyse.textrank
+                    keywords = tfidf(data['summary'])
+                    #循环组合前3个关键词
+                    arr = []
+                    n=0
+                    for s in keywords:
+                        selecttag = "SELECT num from web_tags WHERE tagname ='%s'" % (s)
+                        print selecttag
+                        cursor.execute(selecttag)
+                        results = cursor.fetchall()
+                        # 循环保存到tags表
+                        try:
+                            ISOTIMEFORMAT = '%Y-%m-%d %X'
+                            update_time = time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
+                            if len(results) ==0:
+                                # tag不存在直接插入keyword
+                                inserttag = ("INSERT INTO web_tags(tagname,num,update_time)" "VALUES(%s,%s,%s)")
+                                print inserttag
+                                datatag = (s,1,update_time)
+                                cursor.execute(inserttag, datatag)
+                                db.commit()
+                            else:
+                                for row in results:
+                                    num = int(row[0])
+                                    num = num + 1
+                                    updatetag = "UPDATE web_tags SET num = '%s',update_time="%(num)+"\'"+ update_time +"\'"+"  WHERE tagname =" + "\'"+ s +"\'"
+                                    print updatetag
+                                    cursor.execute(updatetag)
+                                    db.commit()
+                        except:
+                            return
+
+                        n=n+1
+                        arr.append(s)
+                        if n==3:
+                            break
+                    strs = ','.join(arr)
+                    keywords =strs
+
+                    content = data['summary'].encode('utf-8')
+
+                    description = mvhtml.strip_tags(content[0:200])
+
+                    ISOTIMEFORMAT ='%Y-%m-%d %X'
+                    publish_date = time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
+                    hideden = '0'
+                    weight = '1000'
+                    data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight,keywords,description)
+                    try:
+                        cursor.execute(insert, data)
+                    except:
+                        return
+                    db.commit()
+                else:
+                    print '标题重复'
             except:
-                return
-        db.commit()
+                print "异常"
 
         db.close()
 

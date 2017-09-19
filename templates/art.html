@@ -103,7 +103,7 @@
             <div id="job-search" class="positions">
 
                 <div class="positions__search mb-3" style="">
-                    <form action="{% url 'search' %}"  method="post" class="d-flex justify-content-between flex-column flex-md-row align-items-end bg-gray p-3 rounded">
+                    <form action="{% url 'searchart' %}"  method="post" class="d-flex justify-content-between flex-column flex-md-row align-items-end bg-gray p-3 rounded">
                         {% csrf_token %}
                         <div class="form-group w-60 mb-1 mb-md-0 mr-md-3">
                            <!-- <label class="form-control-label">搜一搜</label> -->
@@ -233,7 +233,7 @@
 
 <div class="sidebar__row job__share">
     <div class="share share--list">
-        <h3>Spread the word!</h3>
+        <h3>最新文章</h3>
 
         <div class="social-links d-flex flex-column">
 

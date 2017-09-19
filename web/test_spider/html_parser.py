@@ -17,14 +17,14 @@ class HtmlParser(object):
         #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
         #获取搜狗特定区域的链接
         contentcode = soup.find('div',class_="main-content")
-        if '青岛'.decode("utf-8") in contentcode.get_text():
+        #if '唐嫣'.decode("utf-8") in contentcode.get_text():
             #/item/**/123
             #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
-            links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
-            for link in links:
-                new_url = link['href']
-                new_full_url = urlparse.urljoin(page_url,new_url)
-                new_urls.add(new_full_url)
+        links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
+        for link in links:
+            new_url = link['href']
+            new_full_url = urlparse.urljoin(page_url,new_url)
+            new_urls.add(new_full_url)
         return new_urls
 
 

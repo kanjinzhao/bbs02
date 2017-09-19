@@ -72,11 +72,15 @@ def newart_list(num):
 # Create your views here.
 
 def index(req):
-    articles = models.Article.objects.all().order_by("-publish_date")
+    articles = models.Article.objects.all().order_by("-publish_date")[0:20]
     for article in articles:
         strs = str(article.head_img)
         if 'static/uploads' in strs:
             article.head_img = '/'+ str(article.head_img)
+        #拆分关键字
+        keywords = article.keywords
+        if keywords is not None:
+            article.keywords = keywords.split(',')
     return render(req,'index.html',{'articles':articles})
 
 
@@ -286,7 +290,7 @@ def tags(req,tag):
 
 
 #全站搜索
-def search(req):
+def searchart(req):
     if req.method =="POST":
         form = SearchForm(req.POST)
         if form.is_valid():

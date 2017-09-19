@@ -185,14 +185,20 @@
 
 
                                                 <div class="position__location text-muted small">
-                                                    at <a href="https://vuejobs.com/company/qwire" class="font-weight-bold">Qwire</a> –
+                                                {% if article.keywords %}
+                                                    {% for keyword in article.keywords %}
+
+                                                    <a href="/tags/{{ keyword }}" class="">{{ keyword }}</a>
+                                                    {% endfor %}
+
+                                                {% endif %}
                                                     <span class="text-capitalize">Remote</span>
                                                 </div>
                                             </div>
 
 
                                             <div class="hidden-xs-down position__type small text-right text-muted" style="z-index: 1000">
-                                                <a href="https://vuejobs.com/full-time-vuejs-jobs" class="font-weight-bold">Full-time</a><br>
+                                                {{article.publish_date}}<br>
                                                 Student
                                             </div>
                                         </div>

@@ -12,6 +12,7 @@ Class-based views
 Including another URLconf
     1. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
+import haystack
 from django.conf.urls import include, url
 from django.contrib import admin
 
@@ -28,6 +29,8 @@ urlpatterns = [
     url(r'^user/register/',views.register,name='register'),
     url(r'^tags/(.*)',views.tags,name='tags'),
     #url(r'^test/',views.test),
-    url(r'^search/$',views.search,name='search'),
+    url(r'^searchart/$',views.searchart,name='searchart'),
+    url(r'^search/', include('haystack.urls')),
+
 
 ]

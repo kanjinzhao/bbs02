@@ -1,3 +1,4 @@
+#coding=utf-8
 """
 Django settings for bbs02 project.
 
@@ -37,6 +38,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 添加haystack,haystack需要添加自定义web app的前面
+    'haystack',
     'web',
     'ckeditor',
 )
@@ -124,3 +127,12 @@ STATICFILES_DIRS=(
 #ckeditor
 CKEDITOR_JQUERY_URL ='/static/ckeditor/ckeditor.js'
 
+
+#配置全文搜索whoosh
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'web.whoosh_cn_backend.WhooshEngine',
+        #'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': os.path.join('web', 'whoosh_index'),
+    },
+}
