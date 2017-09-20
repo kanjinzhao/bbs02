@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +25,7 @@
 </head>
 
 <body>
-
+{% load split_keyword %}
 <div class="wrapper" id="app">
 
     <nav class="navigation navbar navbar-light navbar-toggleable-md">
@@ -62,6 +63,20 @@
 
                         </div>
                     </li>
+                    <li>
+                        <div class="positions__search w-75">
+                            <form action="/search"  method="get" class="d-flex justify-content-between flex-column flex-md-row align-items-end">
+                                <div class="form-group w-75 mb-1 mb-md-0 mr-md-3">
+                                                            {% csrf_token %}
+                                    <input id="id_q" name="q" type="search" placeholder="输入您要搜索的内容" class="form-control form-control-sm">
+                                </div>
+                                <div class="form-button">
+                                    <input type="submit" class="btn btn-sm btn-danger" value="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+
                 </ul>
 
                 <ul class="navbar-nav navbar-right ml-md-auto">
@@ -154,7 +169,7 @@
                             </div>
 
                             <h2 class="title">
-                                All Vue.js jobs
+                                {{ cagegory.name }}
                             </h2>
 
                         {%  if articles %}
@@ -168,7 +183,7 @@
 
                                     <div class="position__company text-center">
 
-                                        <IMG src="{{ article.head_img }}">
+                                        <IMG src="/{{ article.head_img }}">
 
                                     </div>
 
@@ -179,10 +194,9 @@
 
                                                 <a href="{% url 'article' article.id %}" class="font-weight-bold">{{ article.title }}</a>
 
-
                                                 <div class="position__location text-muted small">
                                                 {% if article.keywords %}
-                                                    {% for keyword in article.keywords %}
+                                                    {% for keyword in article.keywords|truncate_chars %}
 
                                                     <a href="/tags/{{ keyword }}" class="">{{ keyword }}</a>
                                                     {% endfor %}

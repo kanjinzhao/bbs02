@@ -66,6 +66,19 @@
 
                         </div>
                     </li>
+                    <li>
+                        <div class="positions__search w-75">
+                            <form action="/search"  method="get" class="d-flex justify-content-between flex-column flex-md-row align-items-end">
+                                <div class="form-group w-75 mb-1 mb-md-0 mr-md-3">
+                                                            {% csrf_token %}
+                                    <input id="id_q" name="q" type="search" placeholder="输入您要搜索的内容" class="form-control form-control-sm">
+                                </div>
+                                <div class="form-button">
+                                    <input type="submit" class="btn btn-sm btn-danger" value="Search">
+                                </div>
+                            </form>
+                        </div>
+                    </li>
                 </ul>
 
                 <ul class="navbar-nav navbar-right ml-md-auto">

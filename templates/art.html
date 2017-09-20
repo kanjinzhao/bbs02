@@ -87,6 +87,7 @@
             {{article.content}}
             {% endautoescape %}
         </div>
+        <br>
         {% if keywords %}
         <label>标签：</label>
         {% for keyword in keywords %}
@@ -102,15 +103,12 @@
 
             <div id="job-search" class="positions">
 
-                <div class="positions__search mb-3" style="">
+                <div class="positions__search mb-3">
                     <form action="{% url 'searchart' %}"  method="post" class="d-flex justify-content-between flex-column flex-md-row align-items-end bg-gray p-3 rounded">
-                        {% csrf_token %}
                         <div class="form-group w-60 mb-1 mb-md-0 mr-md-3">
-                           <!-- <label class="form-control-label">搜一搜</label> -->
+                                                    {% csrf_token %}
                             <input name="keyword" placeholder="输入您要搜索的内容" class="form-control form-control-sm" type="text">
-                            <label>{{ err_msg }}</label>
                         </div>
-
                         <div class="form-button">
                             <input type="submit" class="btn btn-sm btn-danger" value="Search">
                         </div>

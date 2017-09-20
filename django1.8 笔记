@@ -243,3 +243,12 @@ arr = []
 for keyword in list:
    arr.append(s)
 str = ','.join(arr)
+
+
+django 全文检索入门
+Django-haystack whoosh jieba分词
+链接1：http://blog.csdn.net/lmb20056127/article/details/78036838
+链接2：http://blog.csdn.net/lmb20056127/article/details/78036826
+
+重新建立索引命令：
+python manage.py rebuild_index

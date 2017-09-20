@@ -20,7 +20,7 @@ from django.db.models import Q
 
 
 
-def my_pagination(request, queryset, display_amount=20, after_range_num = 5,bevor_range_num = 4):
+def my_pagination(request, queryset, display_amount=15, after_range_num = 5,bevor_range_num = 4):
     #按参数分页
     paginator = Paginator(queryset, display_amount)
     try:
@@ -87,17 +87,20 @@ def index(req):
 def lanmu(req,id):
 
     articles = models.Article.objects.filter(categroy_id=id).order_by("-publish_date")
-    for article in articles:
-        strs = str(article.head_img)
-        if 'static/uploads' in strs:
-            article.head_img = '/'+ str(article.head_img)
-        #拆分关键字
-        keywords = article.keywords
-        if keywords is not None:
-            article.keywords = keywords.split(',')
+    #for article in articles:
+    #    keywords = article.keywords
+    #    if keywords is not None:
+    #        article.keywords = keywords.split(',')
 
+    #    strs = str(article.head_img)
+    #    if 'static/uploads' in strs:
+    #        article.head_img = '/'+ str(article.head_img)
+    #    #拆分关键字
 
     objects, page_range = my_pagination(req, articles)
+
+    #栏目名称
+    category = models.Category.objects.get(id=id)
 
 
     #获取15个标签词
@@ -107,7 +110,7 @@ def lanmu(req,id):
     last_list = newart_list(10)
 
     #return render(req,'index.html',{'articles':articles,'page_range':page_range})
-    return render_to_response('list.html',{'articles':objects,'page_range':page_range,'tags':tags,'last_list':last_list},context_instance=RequestContext(req))
+    return render_to_response('list.html',{'articles':objects,'cagegory':category,'page_range':page_range,'tags':tags,'last_list':last_list},context_instance=RequestContext(req))
 
 def article(req,id):
 

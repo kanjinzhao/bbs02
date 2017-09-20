@@ -177,7 +177,7 @@
             {% for result in page.object_list %}
                 <p>
                     <a href="{% url 'article' result.object.id %}" target="_blank">{{ result.object.title }}</a><br/>
-                                    {% highlight  result.object.description with query css_class "keyword" %}
+                                    {{ result.object.description }}
                 </p>
             {% empty %}
                 <p>没有结果发现.</p>
