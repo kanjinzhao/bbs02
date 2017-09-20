@@ -26,6 +26,7 @@
 <body>
 
 <div class="wrapper" id="app">
+    {% load highlight %}
 
     <nav class="navigation navbar navbar-light navbar-toggleable-md">
 
@@ -42,10 +43,10 @@
             <div class="collapse navbar-collapse" id="mobileMenu">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="{% url 'lanmu' 1 %}" class="">栏目1</a>
+                        <a href="{% url 'lanmu' 2 %}" class="">栏目1</a>
                     </li>
                     <li class="nav-item">
-                        <a href="{% url 'lanmu' 2 %}" class="nav-link">栏目2</a>
+                        <a href="{% url 'lanmu' 3 %}" class="nav-link">栏目2</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
@@ -177,8 +178,9 @@
             {% for result in page.object_list %}
                 <p>
                     <a href="{% url 'article' result.object.id %}" target="_blank">{{ result.object.title }}</a><br/>
-                                    {{ result.object.description }}
                 </p>
+                <p>{% highlight result.object.description with query %}</p>
+
             {% empty %}
                 <p>没有结果发现.</p>
             {% endfor %}
