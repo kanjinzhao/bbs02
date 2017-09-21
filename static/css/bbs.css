@@ -15,14 +15,19 @@ color:#e33814;
 .pagination ul li{
 
  float:left;
- margin:5px;
+ margin:0 5px;
  display:block;
  }
 
- .active a{
- background-color:#0077b5;
+.active{
+color: #4fc08d;
+padding:0 5px;
+background-image: none;
+background-color: transparent;
+border:solid 1px #4fc08d;
+border-radius: 4px;
+}
 
- }
 
  .tags{
  margin:0 5px;
