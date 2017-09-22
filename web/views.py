@@ -16,7 +16,10 @@ from jieba import analyse
 import mvhtml
 
 import models
-from django.db.models import Q
+from django.db.models import Q, F
+
+#统计pv
+from .tasks import increase_pv
 
 
 
@@ -146,6 +149,9 @@ def article(req,id):
         comment = models.Comment.objects.filter(article_id=id)
         #print comment
         sum_com =len(comment)
+
+        #统计pv
+        models.Article.objects.filter(id=id).update(pv=F('pv') + 1)
 
     except ObjectDoesNotExist as e:
 

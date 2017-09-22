@@ -21,6 +21,7 @@ class Article(models.Model):
     publish_date = models.DateTimeField(u'发布时间',auto_now=True)
     hideden = models.BooleanField(u"是否隐藏",default=False)
     weight = models.IntegerField(u"优先级",default=1000)
+    pv = models.IntegerField(u'浏览量',default=10)
 
     def __unicode__(self):
         #return "<%s,author:%s>" %(self.title,self.author)
