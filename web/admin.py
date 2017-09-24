@@ -6,11 +6,20 @@ import models
 
 #自定义后台栏目列表显示项
 class CategroyAdmin(admin.ModelAdmin):
-    list_display =('id','name')
+    list_display = ('id','name', 'get_son')
+
+
+    def get_son(self, id):
+        son_category = models.Category.objects.filter(parent_category_id=id)
+
+        return (son_category)
+
+    get_son.short_description = u'子栏目'
 
 
 #自定义后台文章列表显示项
 class ArticleAdmin(admin.ModelAdmin):
+    list_filter = ('categroy',)
     list_display = ('id','title','categroy','author_id','publish_date','hideden')
 
 
@@ -31,6 +40,10 @@ class CommentAdmin(admin.ModelAdmin):
 
 class TagsAadmin(admin.ModelAdmin):
     list_display = ('id','tagname','num','update_time')
+
+
+
+
 
 
 admin.site.register(models.Article,ArticleAdmin)

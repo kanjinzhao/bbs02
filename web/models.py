@@ -79,6 +79,7 @@ class Category(models.Model):
     '''
     name = models.CharField(u"板块名称",max_length=64,unique=True)
     admin = models.ManyToManyField('UserProfile',verbose_name=u"管理员")
+    parent_category = models.ForeignKey('self',related_name='p_category',blank=True,null=True,verbose_name='父栏目')
 
 
     def __unicode__(self):
