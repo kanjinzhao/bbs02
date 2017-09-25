@@ -26,8 +26,15 @@
                     <label for="name" class="form-control-label">栏目</label>
                 <div class="controls">
                         <select name="categroy_id" class="btn btn-secondary btn-file">
-                            {% for lanmu in category %}
-                            <option value="{{lanmu.id}}">{{lanmu.name}}</option>
+                            {% for lanmu in parent_category %}
+                                {% ifequal lanmu.parent_category_id None %}
+                                 <option value="{{lanmu.id}}" class="parent">{{lanmu.name}}</option>
+                                  {% for son in category %}
+                                    {% ifequal son.parent_category_id  lanmu.id %}
+                                        <option value="{{son.id}}" class="son">&nbsp;&nbsp;|-{{son.name}}</option>
+                                    {% endifequal %}
+                                  {% endfor %}
+                                {% endifequal %}
                             {% endfor %}
 
                         </select>

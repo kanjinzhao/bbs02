@@ -30,6 +30,7 @@ class SpiderMain(object):
                 print 'craw %d:%s' % (count,new_url)
                 #启动下载器，下载页面，结果存储在html_cont
                 html_cont = self.downloader.download(new_url)
+
                 #下载页面后，利用parser解析器解析数据
                 new_urls,new_data = self.parser.parse(new_url,html_cont)
                 #将解析出的url添加到url管理器
@@ -51,6 +52,6 @@ class SpiderMain(object):
 if __name__=="__main__":
     #root_url="http://www.baike.com/wiki/%E8%96%9B%E4%B9%8B%E8%B0%A6"
     #root_url="https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
-    root_url = "https://baike.baidu.com/item/%E5%8C%97%E4%BA%AC/128981"
+    root_url = "http://www.zmnedu.com/bk/zx/"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)

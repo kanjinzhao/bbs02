@@ -244,8 +244,12 @@ def add_art(req):
 
 
     if req.user.userprofile.id:
+        parent_category = models.Category.objects.filter(parent_category_id=None)
         category = models.Category.objects.all()
-        return render(req,'addarticle.html',{'category':category,'errs':errs})
+
+
+
+        return render(req,'addarticle.html',{'parent_category':parent_category,'category':category,'errs':errs})
 
 #用户注册验证
 def register(req):

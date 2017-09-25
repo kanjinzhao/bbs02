@@ -24,33 +24,8 @@ class HtmlOutputer(object):
         self.datas.append(data)
 
 
-    def output_html(self):
-        #输出html文件
-        fout = open('out6.html','w')
 
-        fout.write("<html>")
-        fout.write("<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">")
-        fout.write("<body>")
-        fout.write("<table>")
-
-        for data in self.datas:
-
-            fout.write("<tr>")
-            fout.write("<td>%s</td>" % data['url'])
-            #fout.write("<td>%s</td>" % data['head_img'])
-            #fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
-            #fout.write("<td>%s</td>" % data['summary'].encode('utf-8'))
-
-            fout.write("</tr>")
-
-        fout.write("</table>")
-        fout.write("</body>")
-        fout.write("</html>")
-
-
-        fout.close()
-
-        #存入数据库
+    def insertdata(self):
         db = MySQLdb.connect("101.200.208.135", "python", "admin!@#", "bbs",charset="utf8")
         cursor = db.cursor()
         insert = ("INSERT INTO web_article(title,categroy_id,head_img,content,author_id,publish_date,hideden,weight,keywords,description)" "VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)")
@@ -146,4 +121,34 @@ class HtmlOutputer(object):
 
         db.close()
 
+
+
+    def output_html(self):
+        #输出html文件
+        fout = open('out7.html','w')
+
+        fout.write("<html>")
+        fout.write("<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">")
+        fout.write("<body>")
+        fout.write("<table>")
+
+        for data in self.datas:
+
+            fout.write("<tr>")
+            fout.write("<td>%s</td>" % data['url'])
+            #fout.write("<td>%s</td>" % data['head_img'])
+            #fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
+            #fout.write("<td>%s</td>" % data['summary'].encode('utf-8'))
+
+            fout.write("</tr>")
+
+        fout.write("</table>")
+        fout.write("</body>")
+        fout.write("</html>")
+
+
+        fout.close()
+
+        #存入数据库
+        #self.insertdata()
 
