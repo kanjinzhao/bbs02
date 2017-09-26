@@ -1,5 +1,5 @@
 #coding=utf-8
-from web.test_spider import url_manage, html_download, html_parser, html_output
+from web.test_spider import html_download, html_parser, html_output, url_manage
 
 
 class SpiderMain(object):
