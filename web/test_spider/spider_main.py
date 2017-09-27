@@ -21,6 +21,19 @@ class SpiderMain(object):
         count = 1
         #添加入口url
         self.urls.add_new_url(root_url)
+
+        #获取URL列表start
+        new_url = self.urls.get_new_url()
+        print 'craw %d:%s' % (count, new_url)
+        # 启动下载器，下载页面，结果存储在html_cont
+        html_cont = self.downloader.download(new_url)
+
+        # 下载页面后，利用parser解析器解析数据
+        new_urls, new_data = self.parser.parseroot(new_url, html_cont)
+        # 将解析出的url添加到url管理器
+        self.urls.add_new_urls(new_urls)
+
+        # 获取URL列表end
         #启动爬虫循环
         #当url管理器中有url时循环
         while self.urls.has_new_url():

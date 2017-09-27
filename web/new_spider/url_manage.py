@@ -2,7 +2,7 @@
 # @Time    : 17-9-26 下午4:22
 # @Author  : LIUMINGBO
 # @Email   : 540032146@qq.com
-class UrlManager(object):
+class NewsUrlManger(object):
     #构造函数初始化
     def __init__(self):
         self.new_urls = set()
@@ -30,3 +30,4 @@ class UrlManager(object):
         new_url = self.new_urls.pop()
         self.old_urls.add(new_url)
         return new_url
+
