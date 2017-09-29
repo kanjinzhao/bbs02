@@ -44,9 +44,31 @@ class HtmlParser(object):
         #文章内容
         content_node = soup.find('div',class_="ds_cr")
 
+        content_node.img.decompose()
+        content_node.table.decompose()
+
+        key = '\''+str(content_node)+'\''
+        p1 = r'(?<=<div class="ds_cr">).+?(?=<div id="pageurl">)'  # 这是我们写的正则表达式规则，你现在可以不理解啥意思
+        pattern1 = re.compile(p1)  # 我们在编译这段正则表达式
+        matcher1 = re.search(pattern1, key)  # 在源文本中搜索符合正则表达式的部分
+        print matcher1.group(0)  # 打印出来
+
+
+        #content_node.select('.fs14').decompose()
+
+
+
+
+        #content_node.div(class_="fs14").decompose()
+        #div_fs14 = content_node.div
+        #div_fs14.decompose()
+        #content_node.img.decompose()
+
+
         res_data['body'] = content_node
 
-        res_data['description'] = content_node[0:200]
+
+        #res_data['description'] = content_node[0:200]
 
 
         #关键词
@@ -83,6 +105,5 @@ class HtmlParser(object):
             return
 
         soup = BeautifulSoup(html_cont,'html.parser',from_encoding='utf=8')
-        soup = soup.img.decompose()
         new_data = self._get_new_data(page_url,soup)
         return new_data

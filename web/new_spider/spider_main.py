@@ -40,6 +40,11 @@ class SpiderMain(object):
                 new_url = self.urls.get_new_url()
                 print 'craw %d:%s' % (count,new_url)
 
+                if count==10:
+                    break
+
+                count=count+1
+
                 # 启动下载器，下载新闻页面，结果存储在html_cont
                 html_cont = self.downloader.download(new_url)
 
@@ -50,10 +55,6 @@ class SpiderMain(object):
                 # 收集数据
                 self.outputer.collect_data(new_data)
 
-                if count==50:
-                    break
-
-                count=count+1
             except:
                 print 'craw failed'
 
