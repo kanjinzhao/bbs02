@@ -55,7 +55,7 @@ class HtmlOutputer(object):
             #fout.write("<td>%s</td>" % data['head_img'])
             fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
             fout.write("<td>%s</td>" % keywords.encode('utf-8'))
-            fout.write("<td>%s</td>" % data['body'].encode('utf-8'))
+            fout.write("<td>%s</td>" % data['body'])
 
 
 

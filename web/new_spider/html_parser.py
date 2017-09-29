@@ -47,8 +47,13 @@ class HtmlParser(object):
         content_node.img.decompose()
         content_node.table.decompose()
 
-        key = '\''+str(content_node)+'\''
-        p1 = r'(?<=<div class="ds_cr">).+?(?=<div id="pageurl">)'  # 这是我们写的正则表达式规则，你现在可以不理解啥意思
+        key = str(content_node)
+        #print key
+
+        #p1 = r'(?<=<div class="ds_cr">).+?(?=<div id="pageurl">)'
+        p1 = r'(?<=<div class="fs14">).+?(?=</span></div>)'
+
+        # 这是我们写的正则表达式规则，你现在可以不理解啥意思
         pattern1 = re.compile(p1)  # 我们在编译这段正则表达式
         matcher1 = re.search(pattern1, key)  # 在源文本中搜索符合正则表达式的部分
         print matcher1.group(0)  # 打印出来
@@ -65,7 +70,7 @@ class HtmlParser(object):
         #content_node.img.decompose()
 
 
-        res_data['body'] = content_node
+        res_data['body'] = matcher1.group(0)
 
 
         #res_data['description'] = content_node[0:200]
