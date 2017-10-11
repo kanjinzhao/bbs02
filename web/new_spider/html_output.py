@@ -55,7 +55,7 @@ class HtmlOutputer(object):
             #fout.write("<td>%s</td>" % data['head_img'])
             fout.write("<td>%s</td>" % data['title'].encode('utf-8'))
             fout.write("<td>%s</td>" % keywords.encode('utf-8'))
-            fout.write("<td>%s</td>" % data['body'].encode('utf-8'))
+            fout.write("<td>%s</td>" % data['body'])
 
 
 
@@ -72,10 +72,9 @@ class HtmlOutputer(object):
         fout.close()
 
         #存入数据库
-        #self.insertdata()
+        self.insertdata()
 
 
-'''
     def insertdata(self):
         db = MySQLdb.connect("101.200.208.135", "python", "admin!@#", "bbs",charset="utf8")
         cursor = db.cursor()
@@ -99,21 +98,22 @@ class HtmlOutputer(object):
                     categroy_id = '2'
                     #下载图片
                     #urllib2.urlretrieve(data['head_img'],'/home/lmb/bbs02/static/uploads\\d.jpg'%x)
-                    url = data['head_img']
-                    tim = int(time.time())
+                    #url = data['head_img']
+                    #tim = int(time.time())
 
-                    f = open('/home/lmb/bbs02/static/uploads/'+str(x)+ str(tim)+'.jpg','w')
-                    req = urllib2.urlopen(url)
-                    buf = req.read()
-                    f.write(buf)
+                    #f = open('/home/lmb/bbs02/static/uploads/'+str(x)+ str(tim)+'.jpg','w')
+                    #req = urllib2.urlopen(url)
+                    #buf = req.read()
+                    #f.write(buf)
 
 
-                    head_img = 'static/uploads/'+str(x) + str(tim) +'.jpg'
+                    #head_img = 'static/uploads/'+str(x) + str(tim) +'.jpg'
+                    head_img = data['head_img']
                     x=x+1
 
                     #关键词
                     #textrank = analyse.textrank
-                    keywords = tfidf(data['summary'])
+                    keywords = tfidf(data['title'])
                     #循环组合前3个关键词
                     arr = []
                     n=0
@@ -171,7 +171,6 @@ class HtmlOutputer(object):
                 print "异常"
 
         db.close()
-'''
 
 
 

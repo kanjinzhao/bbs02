@@ -46,12 +46,16 @@ class HtmlParser(object):
 
         content_node.img.decompose()
         content_node.table.decompose()
+        new_content = str(content_node)
+        #print key
 
-        key = '\''+str(content_node)+'\''
-        p1 = r'(?<=<div class="ds_cr">).+?(?=<div id="pageurl">)'  # 这是我们写的正则表达式规则，你现在可以不理解啥意思
+        #key = '<div class="ds_cr"><p>根据美国马萨诸塞</p><br><div id="pageurl">adad'
+        p1 = r'(?<=<div class="ds_cr">)([\s\S]*?)(?=<div id="pageurl">)'  # 这是我们写的正则表达式规则，你现在可以不理解啥意思
+        #p1 = r'(?<=<div class="fs14">)(.*?)(?=</div>)'
         pattern1 = re.compile(p1)  # 我们在编译这段正则表达式
-        matcher1 = re.search(pattern1, key)  # 在源文本中搜索符合正则表达式的部分
-        print matcher1.group(0)  # 打印出来
+        matcher1 = re.search(pattern1, new_content)  # 在源文本中搜索符合正则表达式的部分
+        content_node = matcher1.group(0)  # 打印出来
+        #print  content_node
 
 
         #content_node.select('.fs14').decompose()
@@ -68,7 +72,7 @@ class HtmlParser(object):
         res_data['body'] = content_node
 
 
-        #res_data['description'] = content_node[0:200]
+        res_data['description'] = content_node[0:200]
 
 
         #关键词
@@ -80,6 +84,7 @@ class HtmlParser(object):
         #获取图片链接
         #img_node = soup.find('div',class_="summary-pic").find('img')
         #res_data['head_img'] = img_node['src']
+        res_data['head_img'] = '/uploads/401505789957.jpg'
         #print res_data['title']
 
         return res_data

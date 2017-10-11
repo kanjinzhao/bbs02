@@ -40,7 +40,7 @@ class SpiderMain(object):
                 new_url = self.urls.get_new_url()
                 print 'craw %d:%s' % (count,new_url)
 
-                if count==10:
+                if count==5:
                     break
 
                 count=count+1
