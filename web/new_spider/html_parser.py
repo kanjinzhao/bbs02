@@ -72,7 +72,7 @@ class HtmlParser(object):
         res_data['body'] = content_node
 
 
-        res_data['description'] = content_node[0:200]
+        #res_data['description'] = content_node[0:200]
 
 
         #关键词
@@ -84,7 +84,6 @@ class HtmlParser(object):
         #获取图片链接
         #img_node = soup.find('div',class_="summary-pic").find('img')
         #res_data['head_img'] = img_node['src']
-        res_data['head_img'] = '/uploads/401505789957.jpg'
         #print res_data['title']
 
         return res_data
