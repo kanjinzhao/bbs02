@@ -151,7 +151,9 @@ class HtmlOutputer(object):
                     strs = ','.join(arr)
                     keywords =strs
 
-                    content = data['summary'].encode('utf-8')
+                    #content = data['body'].encode('utf-8')
+                    content = data['body']
+
 
                     description = mvhtml.strip_tags(content[0:200])
 
@@ -159,7 +161,7 @@ class HtmlOutputer(object):
                     publish_date = time.strftime(ISOTIMEFORMAT, time.localtime(time.time()))
                     hideden = '0'
                     weight = '1000'
-                    data = (title, categroy_id, head_img, content, author_id,publish_date,hideden,weight,keywords,description)
+                    data = (title,categroy_id,head_img,content,author_id,publish_date,hideden,weight,keywords,description)
                     try:
                         cursor.execute(insert, data)
                     except:
