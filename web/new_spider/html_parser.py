@@ -71,7 +71,7 @@ class HtmlParser(object):
 
         res_data['body'] = content_node
 
-        res_data['head_img']="/uploads/401505789957.jpg"
+        res_data['head_img']="static/uploads/401505789957.jpg"
 
 
         #res_data['description'] = content_node[0:200]

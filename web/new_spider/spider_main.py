@@ -40,7 +40,7 @@ class SpiderMain(object):
                 new_url = self.urls.get_new_url()
                 print 'craw %d:%s' % (count,new_url)
 
-                if count==5:
+                if count==10:
                     break
 
                 count=count+1
@@ -65,7 +65,7 @@ class SpiderMain(object):
 if __name__=="__main__":
     #root_url="http://www.baike.com/wiki/%E8%96%9B%E4%B9%8B%E8%B0%A6"
     #root_url="https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
-    root_url = "http://www.zmnedu.com/bk/zx/"
+    root_url = "http://www.zmnedu.com/bk/zx/index_3.html"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
 
