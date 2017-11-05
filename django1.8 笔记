@@ -1,3 +1,32 @@
+重装系统后需要安装的各种库：
+一、安装django
+三种方法：
+1、 pip install Django==1.8.16
+
+2、yum install python-django
+
+3、下载安装包，解压，python setup.py install
+
+二、安装django haystack （全文检索）
+pip install whoosh django-haystack jieba
+
+三、安装ckeditor
+pip install django-ckeditor
+
+四、安装mysql
+1、快速安装
+sudo yum install MySQL-python
+
+五、安装 pillow
+pip install pillow
+
+
+六、安装celery
+pip install celery
+
+
+
+Django操作：
 一、设计表结构
 文章表、用户表、评论表、栏目表（板块）、用户组表、
 
