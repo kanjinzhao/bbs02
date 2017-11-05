@@ -20,7 +20,7 @@ class HtmlParser(object):
             #/item/**/123
             #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
         #links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
-        links = contentcode.find_all('a',href=re.compile(r"/bk/zx/(\d+).html"))
+        links = contentcode.find_all('a',href=re.compile(r"/(\d+).html"))
 
         for link in links:
             new_url = link['href']
@@ -43,8 +43,9 @@ class HtmlParser(object):
         res_data['title'] = title_node.get_text()
         #文章内容
         content_node = soup.find('div',class_="ds_cr")
-
+        #过滤文章图片
         content_node.img.decompose()
+        #过滤文章图片
         content_node.table.decompose()
         new_content = str(content_node)
         #print key

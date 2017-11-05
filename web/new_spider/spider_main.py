@@ -24,6 +24,7 @@ class SpiderMain(object):
         #添加入口url
         self.urls.add_new_url(root_url)
         new_url = self.urls.get_new_url()
+        #print new_url
         html_cont = self.downloader.download(new_url)
         #print html_cont
 
@@ -40,7 +41,7 @@ class SpiderMain(object):
                 new_url = self.urls.get_new_url()
                 print 'craw %d:%s' % (count,new_url)
 
-                if count==10:
+                if count==2:
                     break
 
                 count=count+1
@@ -65,7 +66,7 @@ class SpiderMain(object):
 if __name__=="__main__":
     #root_url="http://www.baike.com/wiki/%E8%96%9B%E4%B9%8B%E8%B0%A6"
     #root_url="https://baike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417"
-    root_url = "http://www.zmnedu.com/bk/zx/index_3.html"
+    root_url = "http://www.zmnedu.com/bk/zx/index_4.html"
     obj_spider = SpiderMain()
     obj_spider.craw(root_url)
 
