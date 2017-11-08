@@ -36,15 +36,13 @@ class HtmlOutputer(object):
         x = 0
         for data in self.datas:
             title = data['title'].encode('utf-8')
-            body =  data['summary']
 
             selecttitle= "SELECT title from web_article WHERE title ='%s'" % (title)
-            print body
-            #cursor.execute(selecttitle)
-            #resultstitle = cursor.fetchall()
+            print selecttitle
+            cursor.execute(selecttitle)
+            resultstitle = cursor.fetchall()
             try:
-                #if len(resultstitle) ==0:
-                if '美国'.decode("utf-8") in body:
+                if len(resultstitle) ==0:
 
                     author_id = '2'
                     categroy_id = '2'

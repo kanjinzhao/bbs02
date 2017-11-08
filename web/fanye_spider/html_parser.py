@@ -8,8 +8,6 @@ import urlparse
 import re
 from bs4 import BeautifulSoup
 
-from web.test_spider import html_download
-
 
 class HtmlParser(object):
 
@@ -19,10 +17,10 @@ class HtmlParser(object):
         #links = soup.find_all('a',href=re.compile(r"http://www.baike.com/wiki/(.*)"))
         #获取搜狗特定区域的链接
         contentcode = soup.find('div',class_="main-content")
-        #if '美国'.decode("utf-8") in contentcode.get_text():
+        if '美国'.decode("utf-8") in contentcode.get_text():
             #/item/**/123
-            #links = contentcode.find_all('a', href=re.compile(r"/item/(.*)"))
-        links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
+            links = contentcode.find_all('a', href=re.compile(r"/item/(.*)"))
+        #links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
         for link in links:
                 new_url = link['href']
 

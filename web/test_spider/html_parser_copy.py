@@ -1,9 +1,10 @@
 #coding=utf-8
-# @Time    : 17-9-8 上午11:17
+# @Time    : 17-11-6 下午1:55
 # @Author  : LIUMINGBO
 # @Email   : 540032146@qq.com
 
 import urlparse
+import urllib2
 
 import re
 from bs4 import BeautifulSoup
@@ -25,9 +26,19 @@ class HtmlParser(object):
         links = contentcode.find_all('a',href=re.compile(r"/item/(.*)"))
         for link in links:
                 new_url = link['href']
-
-                new_full_url = urlparse.urljoin(page_url,new_url)
-                new_urls.add(new_full_url)
+                #增加判断开始
+                new_full_url_is = urlparse.urljoin(page_url, new_url)
+                #print new_full_url_is
+                new_html_cont =  urllib2.urlopen(new_full_url_is).read()
+                is_soup = BeautifulSoup(new_html_cont, 'html.parser', from_encoding='utf-8')
+                contentcodeis = is_soup.find('div',class_="lemma-summary")
+                if '美国'.decode("utf-8") in contentcodeis.get_text():
+                    #print new_full_url_is
+                    #new_full_url = urlparse.urljoin(page_url, new_full_url_is)
+                    new_urls.add(new_full_url_is)
+                #判断结束
+                #new_full_url = urlparse.urljoin(page_url,new_url)
+                #new_urls.add(new_full_url)
         return new_urls
 
 

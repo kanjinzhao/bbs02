@@ -25,6 +25,10 @@ pip install pillow
 pip install celery
 
 
+七、 selenium 动态爬取
+pip install selenium
+
+
 
 Django操作：
 一、设计表结构
