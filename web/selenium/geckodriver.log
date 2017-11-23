@@ -160,3 +160,868 @@ JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7
 JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1462_13548_21095_17001_24880_20927&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110209721763928616172_1510131660080&_=1510131660084, line 1: TypeError: jQuery110209721763928616172_1510131660080 is not a function
 1510131663680	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510215348089	geckodriver	INFO	geckodriver 0.19.1
+1510215348125	geckodriver	INFO	Listening on 127.0.0.1:48887
+1510215349203	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6ABjPtzauocA"
+1510215351149	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215352525	Marionette	INFO	Enabled via --marionette
+1510215356871	Marionette	INFO	Listening on port 40657
+1510215356916	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215356953	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1510215356956	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215356980	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215357010	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215357027	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215357051	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215357051	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215357751	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510215387487	geckodriver	INFO	geckodriver 0.19.1
+1510215387489	geckodriver	INFO	Listening on 127.0.0.1:52339
+1510215388564	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.uj6R2Y79kGzi"
+1510215388687	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215389071	Marionette	INFO	Enabled via --marionette
+1510215390941	Marionette	INFO	Listening on port 42721
+1510215390982	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215391007	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215391029	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215391036	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215391037	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215391037	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215391063	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1510215391481	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215391563	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510215417149	geckodriver	INFO	geckodriver 0.19.1
+1510215417151	geckodriver	INFO	Listening on 127.0.0.1:43215
+1510215418232	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.4j08CiMzIxv1"
+1510215418366	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215418829	Marionette	INFO	Enabled via --marionette
+1510215420509	Marionette	INFO	Listening on port 39289
+1510215420545	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215420570	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215420585	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215420594	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1510215420596	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215420604	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215420605	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215420606	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215420630	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510215469453	geckodriver	INFO	geckodriver 0.19.1
+1510215469455	geckodriver	INFO	Listening on 127.0.0.1:49585
+1510215470536	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.IRGPZraLAjeW"
+1510215470662	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215471022	Marionette	INFO	Enabled via --marionette
+1510215472736	Marionette	INFO	Listening on port 36741
+1510215472754	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215472780	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215472795	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215472818	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215472819	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215472819	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215472852	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1510215473298	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215473322	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1510215495758	geckodriver	INFO	geckodriver 0.19.1
+1510215495761	geckodriver	INFO	Listening on 127.0.0.1:55765
+1510215496842	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.CtHM8g8jWMz2"
+1510215496969	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215497388	Marionette	INFO	Enabled via --marionette
+1510215499132	Marionette	INFO	Listening on port 34059
+1510215499165	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215499190	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215499209	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215499223	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215499224	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215499224	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215499250	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1510215499725	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215499730	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1510215550429	geckodriver	INFO	geckodriver 0.19.1
+1510215550431	geckodriver	INFO	Listening on 127.0.0.1:58943
+1510215551540	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.52ZuyVcD5bgj"
+1510215551662	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215552052	Marionette	INFO	Enabled via --marionette
+1510215553845	Marionette	INFO	Listening on port 39963
+1510215553853	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215553879	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215553906	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215553918	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215553919	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215553920	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215553945	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.kejiwang.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1510215554342	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215554348	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1510215562718	geckodriver	INFO	geckodriver 0.19.1
+1510215562720	geckodriver	INFO	Listening on 127.0.0.1:53259
+1510215563797	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.mkguf4Aub9Hy"
+1510215563942	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510215564367	Marionette	INFO	Enabled via --marionette
+1510215566296	Marionette	INFO	Listening on port 40635
+1510215566314	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510215566340	Marionette	DEBUG	Register listener.js for window 2147483649
+1510215566366	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215566373	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510215566378	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1510215566381	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510215566382	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510215566382	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510215566407	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1510216300202	geckodriver	INFO	geckodriver 0.19.1
+1510216300204	geckodriver	INFO	Listening on 127.0.0.1:35315
+1510216301278	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.GtCiCJZKAw5u"
+1510216301411	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510216301848	Marionette	INFO	Enabled via --marionette
+1510216303633	Marionette	INFO	Listening on port 41647
+1510216303691	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510216303716	Marionette	DEBUG	Register listener.js for window 2147483649
+1510216303727	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510216304533	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510216304533	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1510216304692	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1510216304724	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1438_24565_21086_17001_24879_22157&csor=1&cb=jQuery110208600033347378_1510216304634&_=1510216304636, line 1: TypeError: jQuery110208600033347378_1510216304634 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1438_24565_21086_17001_24879_22157&csor=2&pwd=%E7%A7%91&cb=jQuery110208600033347378_1510216304634&_=1510216304637, line 1: TypeError: jQuery110208600033347378_1510216304634 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1438_24565_21086_17001_24879_22157&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110208600033347378_1510216304634&_=1510216304638, line 1: TypeError: jQuery110208600033347378_1510216304634 is not a function
+1510216347707	Marionette	DEBUG	Register listener.js for window 4294967297
+1510216400258	geckodriver	INFO	geckodriver 0.19.1
+1510216400261	geckodriver	INFO	Listening on 127.0.0.1:39941
+1510216401336	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.9YBC2KutsQiq"
+1510216401471	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510216401868	Marionette	INFO	Enabled via --marionette
+1510216403598	Marionette	INFO	Listening on port 41949
+1510216403656	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510216403680	Marionette	DEBUG	Register listener.js for window 2147483649
+1510216403693	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510216403732	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510216403733	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510216404448	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.baidu.com/"
+1510216404484	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.baidu.com/"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510216419310	geckodriver	INFO	geckodriver 0.19.1
+1510216419313	geckodriver	INFO	Listening on 127.0.0.1:56629
+1510216420382	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.a60b60csxTjU"
+1510216420509	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510216420920	Marionette	INFO	Enabled via --marionette
+1510216423100	Marionette	INFO	Listening on port 37665
+1510216423194	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510216423217	Marionette	DEBUG	Register listener.js for window 2147483649
+1510216423233	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510216424057	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510216424058	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1510216424206	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1510216424245	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1453_13548_21080_24880_22159&csor=1&cb=jQuery110204369760364877042_1510216424147&_=1510216424148, line 1: TypeError: jQuery110204369760364877042_1510216424147 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1453_13548_21080_24880_22159&csor=2&pwd=%E7%A7%91&cb=jQuery110204369760364877042_1510216424147&_=1510216424149, line 1: TypeError: jQuery110204369760364877042_1510216424147 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1453_13548_21080_24880_22159&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110204369760364877042_1510216424147&_=1510216424150, line 1: TypeError: jQuery110204369760364877042_1510216424147 is not a function
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1510216445352	geckodriver	INFO	geckodriver 0.19.1
+1510216445355	geckodriver	INFO	Listening on 127.0.0.1:35631
+1510216446435	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.HWE9s2iejf9K"
+1510216446559	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510216446965	Marionette	INFO	Enabled via --marionette
+1510216448649	Marionette	INFO	Listening on port 45175
+1510216448749	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510216448781	Marionette	DEBUG	Register listener.js for window 2147483649
+1510216448795	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510216449557	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510216449557	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1510216449718	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1510216449748	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1425_21123_18559_17001_24879_20930&csor=1&cb=jQuery1102023022125296998686_1510216449661&_=1510216449663, line 1: TypeError: jQuery1102023022125296998686_1510216449661 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1425_21123_18559_17001_24879_20930&csor=2&pwd=%E7%A7%91&cb=jQuery1102023022125296998686_1510216449661&_=1510216449664, line 1: TypeError: jQuery1102023022125296998686_1510216449661 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1425_21123_18559_17001_24879_20930&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery1102023022125296998686_1510216449661&_=1510216449665, line 1: TypeError: jQuery1102023022125296998686_1510216449661 is not a function
+1510554868980	geckodriver	INFO	geckodriver 0.19.1
+1510554868996	geckodriver	INFO	Listening on 127.0.0.1:49785
+1510554870128	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.DdcJFmWIQdk6"
+1510554872291	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510554873558	Marionette	INFO	Enabled via --marionette
+1510554877520	Marionette	INFO	Listening on port 43473
+1510554877602	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510554877638	Marionette	DEBUG	Register listener.js for window 2147483649
+1510554877661	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510554877688	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510554877712	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1510554877715	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1510554877719	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510554877719	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1510554878512	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1510555281892	geckodriver	INFO	geckodriver 0.19.1
+1510555281894	geckodriver	INFO	Listening on 127.0.0.1:49429
+1510555282980	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.aBRn02iZ981V"
+1510555283105	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1510555283481	Marionette	INFO	Enabled via --marionette
+1510555285325	Marionette	INFO	Listening on port 35043
+1510555285395	Marionette	WARN	TLS certificate errors will be ignored for this session
+1510555285444	Marionette	DEBUG	Register listener.js for window 2147483649
+1510555285457	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1510555286535	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1510555286536	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1510555286722	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1510555286758	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1434_21115_24880_22157&csor=1&cb=jQuery110206533142395975846_1510555286662&_=1510555286664, line 1: TypeError: jQuery110206533142395975846_1510555286662 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1434_21115_24880_22157&csor=2&pwd=%E7%A7%91&cb=jQuery110206533142395975846_1510555286662&_=1510555286665, line 1: TypeError: jQuery110206533142395975846_1510555286662 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1434_21115_24880_22157&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110206533142395975846_1510555286662&_=1510555286666, line 1: TypeError: jQuery110206533142395975846_1510555286662 is not a function
+1511231900403	geckodriver	INFO	geckodriver 0.19.1
+1511231900430	geckodriver	INFO	Listening on 127.0.0.1:58085
+1511231901560	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.azjbyggdlZc2"
+1511231903504	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1511231904857	Marionette	INFO	Enabled via --marionette
+1511231908989	Marionette	INFO	Listening on port 43623
+1511231909092	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1511231909144	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511231909153	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1511231909175	Marionette	DEBUG	Register listener.js for window 2147483649
+1511231909218	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511231909277	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511231909294	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511231909294	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511231909967	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1511231915205	Marionette	DEBUG	Register listener.js for window 4294967297
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1511231952534	geckodriver	INFO	geckodriver 0.19.1
+1511231952536	geckodriver	INFO	Listening on 127.0.0.1:46577
+1511231953643	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.oSvlg883alWT"
+1511231953781	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1511231954176	Marionette	INFO	Enabled via --marionette
+1511231955854	Marionette	INFO	Listening on port 46473
+1511231955928	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1511231955930	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1511231955954	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511231955979	Marionette	DEBUG	Register listener.js for window 2147483649
+1511231955991	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511231955997	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511231955998	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511231955998	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511231956023	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1511232091023	geckodriver	INFO	geckodriver 0.19.1
+1511232091025	geckodriver	INFO	Listening on 127.0.0.1:43423
+1511232092132	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.HZhMEwgrtTjK"
+1511232092264	addons.xpi	WARN	Error parsing extensions state: [Exception... "Component returned failure code: 0x80520012 (NS_ERROR_FILE_NOT_FOUND) [amIAddonManagerStartup.readStartupData]"  nsresult: "0x80520012 (NS_ERROR_FILE_NOT_FOUND)"  location: "JS frame :: resource://gre/modules/addons/XPIProvider.jsm :: loadExtensionState :: line 1554"  data: no] Stack trace: loadExtensionState()@resource://gre/modules/addons/XPIProvider.jsm:1554 < getInstallState()@resource://gre/modules/addons/XPIProvider.jsm:1589 < checkForChanges()@resource://gre/modules/addons/XPIProvider.jsm:3109 < startup()@resource://gre/modules/addons/XPIProvider.jsm:2188 < callProvider()@resource://gre/modules/AddonManager.jsm:269 < _startProvider()@resource://gre/modules/AddonManager.jsm:739 < startup()@resource://gre/modules/AddonManager.jsm:906 < startup()@resource://gre/modules/AddonManager.jsm:3090 < observe()@jar:file:///usr/lib/firefox/omni.ja!/components/addonManager.js:65
+1511232092668	Marionette	INFO	Enabled via --marionette
+1511232094573	Marionette	INFO	Listening on port 36537
+1511232094630	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1511232094632	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1511232094647	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511232094671	Marionette	DEBUG	Register listener.js for window 2147483649
+1511232094683	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511232094691	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511232094692	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511232094692	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511232094717	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1511332032608	geckodriver	INFO	geckodriver 0.19.1
+1511332032624	geckodriver	INFO	Listening on 127.0.0.1:50093
+1511332033716	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.I9qvwZInLqFv"
+1511332034169	Marionette	INFO	Enabled via --marionette
+1511332036560	Marionette	INFO	Listening on port 37569
+1511332036785	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511332036844	Marionette	DEBUG	Register listener.js for window 2147483649
+1511332036870	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332036877	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332036878	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511332036879	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511332037208	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1511332042604	Marionette	DEBUG	Register listener.js for window 2147483653
+1511332074839	geckodriver	INFO	geckodriver 0.19.1
+1511332074841	geckodriver	INFO	Listening on 127.0.0.1:43447
+1511332075910	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.9KrrmulWvHyI"
+1511332076375	Marionette	INFO	Enabled via --marionette
+1511332078512	Marionette	INFO	Listening on port 36621
+1511332078525	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511332078581	Marionette	DEBUG	Register listener.js for window 2147483649
+1511332078756	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332078768	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332078769	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511332078769	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511332078796	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1511332090256	Marionette	DEBUG	Register listener.js for window 2147483653
+1511332108597	geckodriver	INFO	geckodriver 0.19.1
+1511332108599	geckodriver	INFO	Listening on 127.0.0.1:38973
+1511332109680	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.92B7bIpBdRxr"
+1511332110167	Marionette	INFO	Enabled via --marionette
+1511332113136	Marionette	INFO	Listening on port 37679
+1511332113190	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511332113230	Marionette	DEBUG	Register listener.js for window 2147483649
+1511332113244	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332113252	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332113253	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511332113253	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511332113279	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "about:neterror?e=proxyConnectFailure&u=http%3A//www.baidu.com/&c=UTF-8&f=regular&d=Firefox%20%E5%B0%9D%E8%AF%95%E4%B8%8E%E6%82%A8%E6%8C%87%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%90%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%9E%E6%8E%A5%E6%97%B6%E8%A2%AB%E6%8B%92%E7%BB%9D%E3%80%82"
+1511332131452	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: error
+1511332131457	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511332619605	Marionette	DEBUG	Register listener.js for window 4294967297
+1511332619632	Marionette	DEBUG	Register listener.js for window 4294967299
+1511332623712	geckodriver	INFO	geckodriver 0.19.1
+1511332623715	geckodriver	INFO	Listening on 127.0.0.1:54227
+1511332624790	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.4vBNaRnoJmaQ"
+1511332625270	Marionette	INFO	Enabled via --marionette
+1511332627991	Marionette	INFO	Listening on port 43823
+1511332628005	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511332628052	Marionette	DEBUG	Register listener.js for window 2147483649
+1511332628145	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332628194	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511332628194	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511332628254	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.baidu.com/"
+1511332628302	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.baidu.com/"
+1511332759906	geckodriver	INFO	geckodriver 0.19.1
+1511332759908	geckodriver	INFO	Listening on 127.0.0.1:51385
+1511332760983	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.JeRQoBomHlYp"
+1511332761417	Marionette	INFO	Enabled via --marionette
+1511332763645	Marionette	INFO	Listening on port 36449
+1511332763736	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511332763801	Marionette	DEBUG	Register listener.js for window 2147483649
+1511332763818	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332766513	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511332766514	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511332766850	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511332771088	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1433_24885_21118_25177_22157&csor=1&cb=jQuery110202185519506844532_1511332766796&_=1511332766798, line 1: TypeError: jQuery110202185519506844532_1511332766796 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1433_24885_21118_25177_22157&csor=2&pwd=%E7%A7%91&cb=jQuery110202185519506844532_1511332766796&_=1511332766799, line 1: TypeError: jQuery110202185519506844532_1511332766796 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1433_24885_21118_25177_22157&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110202185519506844532_1511332766796&_=1511332766800, line 1: TypeError: jQuery110202185519506844532_1511332766796 is not a function
+1511332969482	geckodriver	INFO	geckodriver 0.19.1
+1511332969484	geckodriver	INFO	Listening on 127.0.0.1:59469
+1511332970559	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.3oJane4OAPAw"
+1511332971037	Marionette	INFO	Enabled via --marionette
+1511332973184	Marionette	INFO	Listening on port 40899
+1511332973275	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511332973320	Marionette	DEBUG	Register listener.js for window 2147483649
+1511332973342	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511332973397	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511332973397	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511332973463	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.baidu.com/"
+1511332973488	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.baidu.com/"
+1511333285861	geckodriver	INFO	geckodriver 0.19.1
+1511333285863	geckodriver	INFO	Listening on 127.0.0.1:49759
+1511333286938	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.CfA1cqP7vKL1"
+1511333287432	Marionette	INFO	Enabled via --marionette
+1511333289663	Marionette	INFO	Listening on port 37199
+1511333289804	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511333289856	Marionette	DEBUG	Register listener.js for window 2147483649
+1511333289875	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511333293035	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511333293036	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511333302933	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511333302978	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=25052_1427_21127_25177_22159&csor=1&cb=jQuery1102028354064082633124_1511333293543&_=1511333293544, line 1: TypeError: jQuery1102028354064082633124_1511333293543 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=25052_1427_21127_25177_22159&csor=2&pwd=%E7%A7%91&cb=jQuery1102028354064082633124_1511333293543&_=1511333293545, line 1: TypeError: jQuery1102028354064082633124_1511333293543 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=25052_1427_21127_25177_22159&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery1102028354064082633124_1511333293543&_=1511333293546, line 1: TypeError: jQuery1102028354064082633124_1511333293543 is not a function
+1511333752813	geckodriver	INFO	geckodriver 0.19.1
+1511333752815	geckodriver	INFO	Listening on 127.0.0.1:38085
+1511333753911	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.7IZlZv8NrmSt"
+1511333754374	Marionette	INFO	Enabled via --marionette
+1511333756547	Marionette	INFO	Listening on port 39721
+1511333756639	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511333756686	Marionette	DEBUG	Register listener.js for window 2147483649
+1511333756697	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511333760145	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511333760146	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511333760296	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511333765096	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1432_21122_25178_25144_22159&csor=1&cb=jQuery110203287021917045009_1511333760249&_=1511333760250, line 1: TypeError: jQuery110203287021917045009_1511333760249 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1432_21122_25178_25144_22159&csor=2&pwd=%E7%A7%91&cb=jQuery110203287021917045009_1511333760249&_=1511333760251, line 1: TypeError: jQuery110203287021917045009_1511333760249 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1432_21122_25178_25144_22159&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110203287021917045009_1511333760249&_=1511333760252, line 1: TypeError: jQuery110203287021917045009_1511333760249 is not a function
+1511333770470	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511333836581	geckodriver	INFO	geckodriver 0.19.1
+1511333836583	geckodriver	INFO	Listening on 127.0.0.1:45047
+1511333837664	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.qmcUpwHkWs5m"
+1511333838398	Marionette	INFO	Enabled via --marionette
+1511333840647	Marionette	INFO	Listening on port 46237
+1511333840788	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511333840838	Marionette	DEBUG	Register listener.js for window 2147483649
+1511333840856	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511333850234	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511333850234	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511333850417	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511333861342	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1460_21095_17001_25178_20928&csor=1&cb=jQuery11020712234687472642_1511333850327&_=1511333850329, line 1: TypeError: jQuery11020712234687472642_1511333850327 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1460_21095_17001_25178_20928&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery11020712234687472642_1511333850327&_=1511333850331, line 1: TypeError: jQuery11020712234687472642_1511333850327 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1460_21095_17001_25178_20928&csor=2&pwd=%E7%A7%91&cb=jQuery11020712234687472642_1511333850327&_=1511333850330, line 1: TypeError: jQuery11020712234687472642_1511333850327 is not a function
+1511333866679	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334141581	geckodriver	INFO	geckodriver 0.19.1
+1511334141583	geckodriver	INFO	Listening on 127.0.0.1:50031
+1511334142695	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.J8xEJZsJSp9c"
+1511334143857	Marionette	INFO	Enabled via --marionette
+JavaScript error: resource:///modules/BrowserUsageTelemetry.jsm, line 341: NS_ERROR_FAILURE: Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]
+JavaScript error: resource://shield-recipe-client/lib/ShieldRecipeClient.jsm, line 70: TypeError: log is undefined
+JavaScript error: resource://gre/modules/PlacesUtils.jsm, line 1931: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsPIPlacesDatabase.connectionShutdownClient]
+JavaScript error: resource://gre/modules/BookmarkHTMLUtils.jsm, line 911: NS_ERROR_UNEXPECTED: Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsINavBookmarksService.removeFolderChildren]
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1511334148786	geckodriver	INFO	geckodriver 0.19.1
+1511334148788	geckodriver	INFO	Listening on 127.0.0.1:48461
+1511334149874	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.ztitEMvhW0I7"
+1511334150324	Marionette	INFO	Enabled via --marionette
+1511334152630	Marionette	INFO	Listening on port 37947
+1511334152748	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511334152801	Marionette	DEBUG	Register listener.js for window 2147483649
+1511334152812	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511334155175	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511334155176	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511334155907	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511334158063	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1427_24565_21082_17001_25177_25083_20930&csor=1&cb=jQuery110205709624120025646_1511334155282&_=1511334155284, line 1: TypeError: jQuery110205709624120025646_1511334155282 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1427_24565_21082_17001_25177_25083_20930&csor=2&pwd=%E7%A7%91&cb=jQuery110205709624120025646_1511334155282&_=1511334155285, line 1: TypeError: jQuery110205709624120025646_1511334155282 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1427_24565_21082_17001_25177_25083_20930&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110205709624120025646_1511334155282&_=1511334155286, line 1: TypeError: jQuery110205709624120025646_1511334155282 is not a function
+1511334163410	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334168689	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334173967	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334179237	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334184500	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334189771	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334195024	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334200276	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334205528	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511334665637	geckodriver	INFO	geckodriver 0.19.1
+1511334665639	geckodriver	INFO	Listening on 127.0.0.1:42831
+1511334666747	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.jM2HY7Rxud4k"
+1511334667342	Marionette	INFO	Enabled via --marionette
+1511334669491	Marionette	INFO	Listening on port 34225
+1511334669659	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511334669709	Marionette	DEBUG	Register listener.js for window 2147483649
+1511334669722	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511334669769	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511334669769	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511334669814	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.baidu.com/"
+1511334669850	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.baidu.com/"
+1511334675156	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335123612	geckodriver	INFO	geckodriver 0.19.1
+1511335123614	geckodriver	INFO	Listening on 127.0.0.1:41895
+1511335124691	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.3C2U9r0Dw54x"
+1511335125196	Marionette	INFO	Enabled via --marionette
+1511335127896	Marionette	INFO	Listening on port 43587
+1511335127903	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511335127951	Marionette	DEBUG	Register listener.js for window 2147483649
+1511335128056	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511335128114	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511335128114	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511335128183	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.baidu.com/"
+1511335128232	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.baidu.com/"
+1511335349735	geckodriver	INFO	geckodriver 0.19.1
+1511335349738	geckodriver	INFO	Listening on 127.0.0.1:44475
+1511335350844	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.y3vcRPx18vhl"
+1511335351367	Marionette	INFO	Enabled via --marionette
+1511335353584	Marionette	INFO	Listening on port 37859
+1511335353745	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511335353802	Marionette	DEBUG	Register listener.js for window 2147483649
+1511335353815	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511335356302	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511335356303	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511335356576	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511335365291	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483649"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1511335385805	geckodriver	INFO	geckodriver 0.19.1
+1511335385808	geckodriver	INFO	Listening on 127.0.0.1:53697
+1511335386883	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.jlqsuFxOnnR5"
+1511335387333	Marionette	INFO	Enabled via --marionette
+1511335389533	Marionette	INFO	Listening on port 44491
+1511335389656	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511335389706	Marionette	DEBUG	Register listener.js for window 2147483649
+1511335389730	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511335393951	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511335393952	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511335394292	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511335398597	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1434_12897_21093_17001_25178_22160&csor=2&pwd=%E7%A7%91&cb=jQuery110209264263634672021_1511335394235&_=1511335394238, line 1: TypeError: jQuery110209264263634672021_1511335394235 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1434_12897_21093_17001_25178_22160&csor=1&cb=jQuery110209264263634672021_1511335394235&_=1511335394237, line 1: TypeError: jQuery110209264263634672021_1511335394235 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1434_12897_21093_17001_25178_22160&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110209264263634672021_1511335394235&_=1511335394239, line 1: TypeError: jQuery110209264263634672021_1511335394235 is not a function
+1511335403940	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335409199	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335414458	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335419694	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335424934	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335430185	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335435426	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335440681	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335445912	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335474921	geckodriver	INFO	geckodriver 0.19.1
+1511335474923	geckodriver	INFO	Listening on 127.0.0.1:40893
+1511335476001	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.IRsP2vzrowOv"
+1511335476488	Marionette	INFO	Enabled via --marionette
+1511335478762	Marionette	INFO	Listening on port 33151
+1511335478886	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511335478931	Marionette	DEBUG	Register listener.js for window 2147483649
+1511335478945	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511335481785	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511335481785	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511335482082	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511335485724	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1454_24869_21090_25177_25084_22073&csor=1&cb=jQuery110206598260962802485_1511335481870&_=1511335481872, line 1: TypeError: jQuery110206598260962802485_1511335481870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1454_24869_21090_25177_25084_22073&csor=2&pwd=%E7%A7%91&cb=jQuery110206598260962802485_1511335481870&_=1511335481873, line 1: TypeError: jQuery110206598260962802485_1511335481870 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1454_24869_21090_25177_25084_22073&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110206598260962802485_1511335481870&_=1511335481874, line 1: TypeError: jQuery110206598260962802485_1511335481870 is not a function
+1511335491103	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335521749	geckodriver	INFO	geckodriver 0.19.1
+1511335521751	geckodriver	INFO	Listening on 127.0.0.1:33513
+1511335522828	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.HZFcld5eFlgL"
+1511335523321	Marionette	INFO	Enabled via --marionette
+1511335525434	Marionette	INFO	Listening on port 44131
+1511335525440	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511335525478	Marionette	DEBUG	Register listener.js for window 2147483649
+1511335525580	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511335527280	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511335527281	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511335527441	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511335529425	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1449_24885_13289_21089_17001_25177_22157&csor=1&cb=jQuery110202611607755161244_1511335527390&_=1511335527391, line 1: TypeError: jQuery110202611607755161244_1511335527390 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1449_24885_13289_21089_17001_25177_22157&csor=2&pwd=%E7%A7%91&cb=jQuery110202611607755161244_1511335527390&_=1511335527392, line 1: TypeError: jQuery110202611607755161244_1511335527390 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1449_24885_13289_21089_17001_25177_22157&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110202611607755161244_1511335527390&_=1511335527393, line 1: TypeError: jQuery110202611607755161244_1511335527390 is not a function
+1511335534800	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335540044	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335545285	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335550527	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335555763	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335561000	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335566225	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335571456	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511335576686	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336163003	geckodriver	INFO	geckodriver 0.19.1
+1511336163005	geckodriver	INFO	Listening on 127.0.0.1:59331
+1511336164112	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.qNfTbF69LNMp"
+1511336164612	Marionette	INFO	Enabled via --marionette
+1511336167159	Marionette	INFO	Listening on port 45173
+1511336167227	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511336167265	Marionette	DEBUG	Register listener.js for window 2147483649
+1511336167274	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511336167319	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511336167319	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511336167392	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://www.baidu.com/"
+1511336167432	Marionette	DEBUG	Received DOM event "pageshow" for "http://www.baidu.com/"
+1511336172737	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336195632	geckodriver	INFO	geckodriver 0.19.1
+1511336195634	geckodriver	INFO	Listening on 127.0.0.1:45611
+1511336196710	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.zDnXrtoLXDtK"
+1511336197179	Marionette	INFO	Enabled via --marionette
+1511336199429	Marionette	INFO	Listening on port 33313
+1511336199577	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511336199614	Marionette	DEBUG	Register listener.js for window 2147483649
+1511336199629	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511336209314	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511336209314	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/plugins/every_cookie_4644b13.js, line 4: ReferenceError: c is not defined
+1511336210174	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "https://www.baidu.com/"
+1511336215314	Marionette	DEBUG	Received DOM event "pageshow" for "https://www.baidu.com/"
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80&json=1&p=3&sid=1438_21101_17001_25178_22159&csor=2&pwd=%E7%A7%91&cb=jQuery110209806168541404376_1511336210118&_=1511336210121, line 1: TypeError: jQuery110209806168541404376_1511336210118 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91&json=1&p=3&sid=1438_21101_17001_25178_22159&csor=1&cb=jQuery110209806168541404376_1511336210118&_=1511336210120, line 1: TypeError: jQuery110209806168541404376_1511336210118 is not a function
+JavaScript error: https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=%E7%A7%91%E6%8A%80%E7%BD%91&json=1&p=3&sid=1438_21101_17001_25178_22159&csor=3&pwd=%E7%A7%91%E6%8A%80&cb=jQuery110209806168541404376_1511336210118&_=1511336210122, line 1: TypeError: jQuery110209806168541404376_1511336210118 is not a function
+1511336220667	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336225911	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336231194	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336236462	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336241696	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336246926	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336252161	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336257382	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336262610	Marionette	DEBUG	Canceled page load listener because no navigation has been detected
+1511336299797	Marionette	DEBUG	Register listener.js for window 4294967297
+1511336299825	Marionette	DEBUG	Register listener.js for window 4294967299
+1511336408451	geckodriver	INFO	geckodriver 0.19.1
+1511336408453	geckodriver	INFO	Listening on 127.0.0.1:41401
+1511336409529	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.oJZ6hSD9nooq"
+1511336410013	Marionette	INFO	Enabled via --marionette
+1511336412118	Marionette	INFO	Listening on port 38411
+1511336412218	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511336412272	Marionette	DEBUG	Register listener.js for window 2147483649
+1511336412286	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511336412421	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511336412421	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/, line 136: ReferenceError: $ is not defined
+1511336413545	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511336416919	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511336422001	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511336422081	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511336422084	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml, line 136: ReferenceError: $ is not defined
+1511336422188	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483655"
+1511336422188	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483653"
+1511336422435	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511336422908	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511336427951	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511336428057	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511336428061	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml, line 136: ReferenceError: $ is not defined
+1511336428161	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483661"
+1511336428166	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483659"
+1511336428433	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511336428548	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511336433603	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511336433683	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511336433687	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml, line 136: ReferenceError: $ is not defined
+1511336433788	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483667"
+1511336433788	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483665"
+1511336434065	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511336435873	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511336440942	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511336441000	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511336441002	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml, line 136: ReferenceError: $ is not defined
+1511336441076	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483673"
+1511336441077	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483671"
+1511336441363	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511336443187	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511336448243	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511336448355	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511336448358	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml, line 136: ReferenceError: $ is not defined
+1511336448441	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483679"
+1511336448441	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483677"
+1511336448695	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511336450567	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511336455631	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511336455730	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511336455733	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml, line 136: ReferenceError: $ is not defined
+1511336455837	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483685"
+1511336455838	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483683"
+1511336456097	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511336457852	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511336462887	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511336462942	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511336462945	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml, line 136: ReferenceError: $ is not defined
+1511336463022	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483691"
+1511336463022	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483689"
+1511336463281	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511336463412	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511336468443	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511336468497	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511336468501	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml, line 136: ReferenceError: $ is not defined
+1511336468605	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483697"
+1511336468605	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483695"
+1511336468880	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+1511336469075	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+1511336474119	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+1511336474182	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+1511336474185	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_9.shtml, line 136: ReferenceError: $ is not defined
+1511336474270	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483703"
+1511336474270	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483701"
+1511336474534	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_9.shtml"
+1511336476284	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_9.shtml"
+1511338404637	geckodriver	INFO	geckodriver 0.19.1
+1511338404640	geckodriver	INFO	Listening on 127.0.0.1:35357
+1511338405746	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.RZgEPVDfG0V4"
+1511338406234	Marionette	INFO	Enabled via --marionette
+1511338408572	Marionette	INFO	Listening on port 39077
+1511338408687	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511338408739	Marionette	DEBUG	Register listener.js for window 2147483649
+1511338408759	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511338408813	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511338408813	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/, line 136: ReferenceError: $ is not defined
+1511338409598	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338413242	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338418324	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338418364	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338418365	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml, line 136: ReferenceError: $ is not defined
+1511338418444	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483655"
+1511338418444	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483653"
+1511338418669	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338418871	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338423894	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338423958	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338423961	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml, line 136: ReferenceError: $ is not defined
+1511338424047	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483661"
+1511338424047	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483659"
+1511338424297	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338424419	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338429490	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338429563	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338429566	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml, line 136: ReferenceError: $ is not defined
+1511338429662	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483667"
+1511338429663	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483665"
+1511338429912	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338431780	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338436842	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338436900	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338436902	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml, line 136: ReferenceError: $ is not defined
+1511338437022	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483673"
+1511338437022	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483671"
+1511338437267	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338437481	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338442547	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338442618	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338442620	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml, line 136: ReferenceError: $ is not defined
+1511338442723	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483679"
+1511338442723	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483677"
+1511338442983	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511338445551	geckodriver	INFO	geckodriver 0.19.1
+1511338445553	geckodriver	INFO	Listening on 127.0.0.1:50867
+1511338446430	geckodriver	INFO	geckodriver 0.19.1
+1511338446432	geckodriver	INFO	Listening on 127.0.0.1:54787
+1511338447540	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.2OED3PofpYnY"
+1511338448027	Marionette	INFO	Enabled via --marionette
+1511338449281	geckodriver	INFO	geckodriver 0.19.1
+1511338449283	geckodriver	INFO	Listening on 127.0.0.1:54173
+1511338450359	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.kGQZEud7nmdL"
+1511338450875	Marionette	INFO	Enabled via --marionette
+1511338453114	Marionette	INFO	Listening on port 43703
+1511338453282	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511338453334	Marionette	DEBUG	Register listener.js for window 2147483649
+1511338453342	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511338453399	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511338453399	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/, line 136: ReferenceError: $ is not defined
+1511338454178	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338456463	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338461539	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338461583	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+1511338461586	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml, line 136: ReferenceError: $ is not defined
+1511338461688	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483655"
+1511338461688	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483653"
+1511338461948	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338465608	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338470652	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338470716	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+1511338470719	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_1.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml, line 136: ReferenceError: $ is not defined
+1511338470817	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483661"
+1511338470818	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483659"
+1511338471076	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338472929	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338477971	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338478030	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+1511338478033	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_2.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml, line 136: ReferenceError: $ is not defined
+1511338478139	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483667"
+1511338478139	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483665"
+1511338478381	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338478501	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338483532	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338483588	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+1511338483591	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_3.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml, line 136: ReferenceError: $ is not defined
+1511338483662	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483673"
+1511338483665	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483671"
+1511338483890	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338484018	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338489077	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338489178	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+1511338489181	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_4.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml, line 136: ReferenceError: $ is not defined
+1511338489287	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483679"
+1511338489287	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483677"
+1511338489524	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511338489696	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511338494726	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511338494795	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+1511338494799	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_5.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml, line 136: ReferenceError: $ is not defined
+1511338494901	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483685"
+1511338494901	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483683"
+1511338495142	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511338495240	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511338500281	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511338500337	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+1511338500341	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_6.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml, line 136: ReferenceError: $ is not defined
+1511338500443	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483691"
+1511338500443	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483689"
+1511338500676	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511338500807	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511338505848	Marionette	DEBUG	Received DOM event "beforeunload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511338505901	Marionette	DEBUG	Received DOM event "pagehide" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+1511338505904	Marionette	DEBUG	Received DOM event "unload" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_7.shtml"
+JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml, line 136: ReferenceError: $ is not defined
+1511338505976	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483697"
+1511338505976	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483695"
+1511338506233	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+1511338506540	Marionette	DEBUG	Received DOM event "pageshow" for "http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml"
+1511338983082	Marionette	DEBUG	Register listener.js for window 2147483706
+1511338983241	Marionette	DEBUG	Register listener.js for window 4294967297
+1511339371330	geckodriver	INFO	geckodriver 0.19.1
+1511339371332	geckodriver	INFO	Listening on 127.0.0.1:38153
+1511339372439	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.NFoSjqsIB2BQ"
+1511339372905	Marionette	INFO	Enabled via --marionette
+1511339375253	Marionette	INFO	Listening on port 35535
+1511339375376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511339375423	Marionette	DEBUG	Register listener.js for window 2147483649
+1511339375446	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339382829	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511339382829	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511339383037	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511339391154	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511339454228	geckodriver	INFO	geckodriver 0.19.1
+1511339454230	geckodriver	INFO	Listening on 127.0.0.1:46865
+1511339455306	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.4qvELqLKne9u"
+1511339455802	Marionette	INFO	Enabled via --marionette
+1511339458004	Marionette	INFO	Listening on port 38929
+1511339458017	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511339458055	Marionette	DEBUG	Register listener.js for window 2147483649
+1511339458139	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339502269	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+1511339712646	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339712655	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511339712655	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511339712656	Marionette	DEBUG	Received observer notification "outer-window-destroyed" for "2147483649"
+1511339718703	geckodriver	INFO	geckodriver 0.19.1
+1511339718705	geckodriver	INFO	Listening on 127.0.0.1:50901
+1511339719782	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.rZgcyU8TvxXz"
+1511339720258	Marionette	INFO	Enabled via --marionette
+1511339722505	Marionette	INFO	Listening on port 43303
+1511339722636	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511339722682	Marionette	DEBUG	Register listener.js for window 2147483649
+1511339722695	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339811239	addons.productaddons	WARN	Failed downloading XML, status: 0, reason: timeout
+1511339815484	geckodriver	INFO	geckodriver 0.19.1
+1511339815486	geckodriver	INFO	Listening on 127.0.0.1:58957
+1511339816561	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.0sneRruYgljb"
+1511339817064	Marionette	INFO	Enabled via --marionette
+1511339819420	Marionette	INFO	Listening on port 44005
+1511339819548	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511339819602	Marionette	DEBUG	Register listener.js for window 2147483649
+1511339819617	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339834349	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511339834349	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511339834548	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511339838682	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511339874535	geckodriver	INFO	geckodriver 0.19.1
+1511339874537	geckodriver	INFO	Listening on 127.0.0.1:54829
+1511339875644	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.z4GeHwGp7fpk"
+1511339876420	Marionette	INFO	Enabled via --marionette
+1511339878603	Marionette	INFO	Listening on port 43995
+1511339878734	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511339878783	Marionette	DEBUG	Register listener.js for window 2147483649
+1511339878793	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339879851	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511339879851	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511339880035	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511339881445	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511339922520	geckodriver	INFO	geckodriver 0.19.1
+1511339922523	geckodriver	INFO	Listening on 127.0.0.1:47915
+1511339923600	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.FybRYw6uMfXX"
+1511339924061	Marionette	INFO	Enabled via --marionette
+1511339926142	Marionette	INFO	Listening on port 34553
+1511339926324	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511339926375	Marionette	DEBUG	Register listener.js for window 2147483649
+1511339926397	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511339928009	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511339928009	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511339928275	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511339932638	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
