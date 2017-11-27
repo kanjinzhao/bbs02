@@ -19,6 +19,7 @@ browser.get('http://bbs.qyer.com/forum-2-1.html')
 #time.sleep(5)
 #browser.find_element_by_class_name("n").click()
 
+
 num = 1
 while (num < 9):
     print '第'+ str(num) +'页'

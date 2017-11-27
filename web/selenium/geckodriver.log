@@ -1025,3 +1025,135 @@ JavaScript error: http://liuxue.xdf.cn/usa/undergraduate/sqzd/index_8.shtml, lin
 1511339928275	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
 1511339932638	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+1511510144887	geckodriver	INFO	geckodriver 0.19.1
+1511510144916	geckodriver	INFO	Listening on 127.0.0.1:40253
+1511510146005	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.xcGSiYbTPFg8"
+1511510146663	Marionette	INFO	Enabled via --marionette
+1511510149540	Marionette	INFO	Listening on port 44451
+1511510149694	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511510149732	Marionette	DEBUG	Register listener.js for window 2147483649
+1511510149758	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511510150382	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511510150383	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511510150645	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511510156523	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511510169788	geckodriver	INFO	geckodriver 0.19.1
+1511510169790	geckodriver	INFO	Listening on 127.0.0.1:35859
+1511510170869	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.akmcinBy3Kvz"
+1511510171362	Marionette	INFO	Enabled via --marionette
+1511510173703	Marionette	INFO	Listening on port 44933
+1511510173826	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511510173877	Marionette	DEBUG	Register listener.js for window 2147483649
+1511510173893	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511510174520	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511510174520	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511510174716	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511510178061	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511510814587	geckodriver	INFO	geckodriver 0.19.1
+1511510814589	geckodriver	INFO	Listening on 127.0.0.1:55459
+1511510815669	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.1VhpINADfG5c"
+1511510816173	Marionette	INFO	Enabled via --marionette
+1511510818520	Marionette	INFO	Listening on port 40103
+1511510818622	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511510818669	Marionette	DEBUG	Register listener.js for window 2147483649
+1511510818686	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511510819385	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511510819386	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511510819618	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511510823995	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511510897418	geckodriver	INFO	geckodriver 0.19.1
+1511510897420	geckodriver	INFO	Listening on 127.0.0.1:47981
+1511510898498	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.TfAgRh0M4fl6"
+1511510898961	Marionette	INFO	Enabled via --marionette
+1511510901243	Marionette	INFO	Listening on port 41511
+1511510901376	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511510901439	Marionette	DEBUG	Register listener.js for window 2147483649
+1511510901454	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511510902139	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511510902139	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511510902343	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511510906264	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511510928489	geckodriver	INFO	geckodriver 0.19.1
+1511510928491	geckodriver	INFO	Listening on 127.0.0.1:57953
+1511510929595	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.HoqqJhX9f9LF"
+1511510930094	Marionette	INFO	Enabled via --marionette
+1511510933077	Marionette	INFO	Listening on port 45321
+1511510933216	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511510933270	Marionette	DEBUG	Register listener.js for window 2147483649
+1511510933284	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511510933942	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511510933942	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511510934126	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511510938131	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511511011099	geckodriver	INFO	geckodriver 0.19.1
+1511511011101	geckodriver	INFO	Listening on 127.0.0.1:54497
+1511511012203	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.SLsFC5SS4KJt"
+1511511012744	Marionette	INFO	Enabled via --marionette
+1511511015286	Marionette	INFO	Listening on port 43157
+1511511015316	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511511015356	Marionette	DEBUG	Register listener.js for window 2147483649
+1511511015377	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511511015960	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511511015960	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511511016193	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511511020345	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511511591291	geckodriver	INFO	geckodriver 0.19.1
+1511511591294	geckodriver	INFO	Listening on 127.0.0.1:41769
+1511511591370	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.w1tuICVUI8ZU"
+1511511591890	Marionette	INFO	Enabled via --marionette
+1511511594148	Marionette	INFO	Listening on port 38571
+1511511594247	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511511594298	Marionette	DEBUG	Register listener.js for window 2147483649
+1511511594321	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511511595379	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511511595379	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511511595548	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511511599143	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511511645760	geckodriver	INFO	geckodriver 0.19.1
+1511511645762	geckodriver	INFO	Listening on 127.0.0.1:49015
+1511511646840	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.4xskAaQ2Ltsx"
+1511511647378	Marionette	INFO	Enabled via --marionette
+1511511649807	Marionette	INFO	Listening on port 41401
+1511511649948	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511511649988	Marionette	DEBUG	Register listener.js for window 2147483649
+1511511650011	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511511650607	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511511650608	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511511650840	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511511656011	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511511931185	geckodriver	INFO	geckodriver 0.19.1
+1511511931187	geckodriver	INFO	Listening on 127.0.0.1:45209
+1511511932269	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.AoF3rRY5fgP1"
+1511511932773	Marionette	INFO	Enabled via --marionette
+1511511935092	Marionette	INFO	Listening on port 36845
+1511511935224	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511511935272	Marionette	DEBUG	Register listener.js for window 2147483649
+1511511935283	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511511935579	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511511935580	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511511935795	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511511939435	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511511963334	geckodriver	INFO	geckodriver 0.19.1
+1511511963336	geckodriver	INFO	Listening on 127.0.0.1:40821
+1511511964444	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.pSVFzlGLTotD"
+1511511965499	Marionette	INFO	Enabled via --marionette
+1511511967789	Marionette	INFO	Listening on port 34439
+1511511967899	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511511967937	Marionette	DEBUG	Register listener.js for window 2147483649
+1511511967953	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511511968476	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511511968476	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511511968678	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511511972586	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
+1511511990923	geckodriver	INFO	geckodriver 0.19.1
+1511511990926	geckodriver	INFO	Listening on 127.0.0.1:42395
+1511511991998	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-profile" "/tmp/rust_mozprofile.6RatolVGx8lt"
+1511511992678	Marionette	INFO	Enabled via --marionette
+1511511996126	Marionette	INFO	Listening on port 37121
+1511511996242	Marionette	WARN	TLS certificate errors will be ignored for this session
+1511511996292	Marionette	DEBUG	Register listener.js for window 2147483649
+1511511996309	Marionette	DEBUG	Received DOM event "beforeunload" for "about:blank"
+1511511996863	Marionette	DEBUG	Received DOM event "pagehide" for "about:blank"
+1511511996863	Marionette	DEBUG	Received DOM event "unload" for "about:blank"
+1511511997050	Marionette	DEBUG	Received DOM event "DOMContentLoaded" for "http://bbs.qyer.com/forum-2-1.html"
+1511512000371	Marionette	DEBUG	Received DOM event "pageshow" for "http://bbs.qyer.com/forum-2-1.html"
